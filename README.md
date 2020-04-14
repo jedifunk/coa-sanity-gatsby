@@ -27,3 +27,6 @@ Config.source.url = Config.source.protocol + '://' + Config.source.wpUrl;
 
 module.exports = Config
 ```
+
+### TODO
+- [ ] decide between `@sanity/image-url` and `gatsby-image`
