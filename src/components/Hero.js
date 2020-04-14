@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 export default () => (
   <StaticQuery query={graphql`
@@ -9,6 +10,9 @@ export default () => (
           asset {
             _id
             url
+            fluid(maxWidth: 1600) {
+              ...GatsbySanityImageFluid
+            }
           }
           alt
         }
@@ -17,7 +21,7 @@ export default () => (
   `}
   render={data => (
     <div className="hero">
-      <img src={data.sanitySiteSettings.hpHero.asset.url} alt={data.sanitySiteSettings.hpHero.alt} />
+      <Img fluid={data.sanitySiteSettings.hpHero.asset.fluid} alt={data.sanitySiteSettings.hpHero.alt} />
     </div>
   )}
   />

@@ -143,7 +143,7 @@
 }
 
 @media (min-width:782px) {
-    .wp-block-column:not(: first-child) {
+    .wp-block-column:not(:first-child) {
         margin-left: 32px
     }
 }
@@ -2492,13 +2492,13 @@ textarea {
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
+	/* display: inline; */
 	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
+	/* display: inline; */
 	float: right;
 	margin-left: 1.5em;
 }
@@ -2834,9 +2834,7 @@ header input[type="search"]:focus {
 	color: black;
 	text-decoration: none;
 }
-.entry-title a:hover {
 
-}
 /* Featured */
 .featured {
 	margin-bottom: 2rem;
@@ -2889,6 +2887,7 @@ header input[type="search"]:focus {
 
 /* Categories */
 .post-categories,
+.widget_cloud ul,
 .widget_categories ul {
 	list-style: none;
 	margin: 0;
@@ -2908,8 +2907,8 @@ header input[type="search"]:focus {
 .featured-item .cat-links a:visited,
 .featured-item .tax-links a,
 .featured-item .tax-links a:visited,
-.widget_categories a,
-.widget_categories a:visited {;
+.widget_cloud a,
+.widget_cloud a:visited {
 	text-decoration: none;
 	color: rgba(212,175,55,1);
 	text-transform: uppercase;
@@ -2917,9 +2916,7 @@ header input[type="search"]:focus {
 	padding-bottom: 2px;
 	border-bottom: 1px dotted rgba(212,175,55,1);
 }
-.tax a:hover {
 
-}
 /* Post Nav */
 .nav-links {
 	display: flex;
@@ -2934,11 +2931,13 @@ header input[type="search"]:focus {
 	text-transform: uppercase;
 	border-bottom: 1px dotted black;
 }
-.widget_categories ul {
+.widget_categories ul,
+.widget_cloud ul {
 	display: flex;
 	flex-wrap: wrap;
 }
-.widget_categories ul li {
+.widget_categories ul li,
+.widget_cloud ul li {
 	margin: 2px;
 }
 

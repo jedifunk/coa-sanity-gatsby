@@ -23,7 +23,7 @@ const CategoriesWidget = () => (
       const categories = data.allSanityCategory.edges
 
       return (
-        <section id="categories-2" className="widget widget_categories">
+        <section id="categories-2" className="widget widget_cloud widget_categories">
           <h2 className="widget-title">Categories</h2>
           <ul>
             {categories && categories.map(category => (

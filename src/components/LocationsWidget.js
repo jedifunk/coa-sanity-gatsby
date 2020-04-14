@@ -23,7 +23,7 @@ const LocationsWidget = () => (
       const locations = data.allSanityLocation.edges
       
       return (
-        <section id="locations" className="widget widget_locations">
+        <section id="locations" className="widget widget_cloud widget_locations">
           <h2 className="widget-title">Places</h2>
           <ul>
             {locations && locations.map(location => (
