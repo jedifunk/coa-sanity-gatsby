@@ -86,8 +86,6 @@ module.exports = async ({graphql, actions, reporter}) => {
   // Category Archives
   const categories = result.data.catGroup.group
 
-  //const catNumPages = Math.ceil(categories.length / postsPerPage)
-
   categories.forEach(category => {
     createPage({
       path: `/${category.fieldValue}/`,
@@ -99,26 +97,8 @@ module.exports = async ({graphql, actions, reporter}) => {
     reporter.info(`[choosingouradventure] create category archive: ${category.fieldValue}`)
   })
 
-  // Array.from({ length: catNumPages }).forEach((_, i) => {
-    
-  //   createPage({
-  //     path: i === 0 ? `/${cat.title}` : `/${cat.title}/${i + 1}`,
-  //     component: categoryTemplate,
-  //     context: {
-  //       category: category.id,
-  //       limit: postsPerPage,
-  //       skip: i * postsPerPage,
-  //       catNumPages,
-  //       currentPage: i + 1
-  //     }
-  //   })
-  //   reporter.info(`[choosingouradventure] create category page: ${i + 1}`)
-  // }) 
-
   // Location Archives
   const locations = result.data.locGroup.group
-
-  //const catNumPages = Math.ceil(categories.length / postsPerPage)
 
   locations.forEach(location => {
     createPage({
