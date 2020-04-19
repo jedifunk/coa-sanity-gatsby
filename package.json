@@ -25,6 +25,7 @@
     "react-icons": "^3.9.0",
     "react-image-lightbox": "^5.1.1",
     "react-instagram-embed": "^1.5.0",
+    "react-player": "^1.15.3",
     "react-share": "^4.1.0"
   },
   "devDependencies": {

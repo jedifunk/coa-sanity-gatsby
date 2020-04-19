@@ -2872,6 +2872,9 @@ header input[type="search"]:focus {
 	color: white;
 }
 /* Single Post */
+.social-share {
+    margin: 1rem 0;
+}
 .social-share-list {
     list-style: none;
     margin: 0;
