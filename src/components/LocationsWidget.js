@@ -28,7 +28,7 @@ const LocationsWidget = () => (
           <ul>
             {locations && locations.map(location => (
               <li key={location.node.slug.current}>
-                <Link to={`/category/${location.node.slug.current}`}>{location.node.name}</Link>
+                <Link to={`/${location.node.slug.current}`}>{location.node.name}</Link>
               </li>
             ))}
           </ul>

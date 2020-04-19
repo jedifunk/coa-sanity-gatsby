@@ -6,6 +6,7 @@
   "author": "Bryce Flory <iam@bryceflory.com>",
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/image-url": "^0.140.18",
     "gatsby": "^2.20.20",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-google-fonts-v2": "^0.0.5",
