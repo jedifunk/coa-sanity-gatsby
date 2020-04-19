@@ -92,7 +92,12 @@ export const query = graphql`
             asset {
               _id
               url
-
+            }
+            hotspot {
+              height
+              width
+              x
+              y
             }
           }
           excerpt

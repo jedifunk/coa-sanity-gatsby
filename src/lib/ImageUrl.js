@@ -3,6 +3,6 @@ import imageUrlBuilder from '@sanity/image-url'
 
 const builder = imageUrlBuilder(config.source)
 
-export function urlFor (source) {
-  return builder.image(source)
+export function urlFor(incoming) {
+  return builder.image(incoming)
 }
