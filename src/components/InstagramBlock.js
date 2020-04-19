@@ -11,7 +11,6 @@ const InstagramBlock = ({ node }) => {
   return (
     <InstagramEmbed
       url={url}
-      maxWidth={480}
       containerTagName="div"
       injectScript
     />
