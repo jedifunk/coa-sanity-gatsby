@@ -1,7 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import {getFluidGatsbyImage} from 'gatsby-source-sanity'
-const Config = require('../../config')
 
 export default ({node}) => {
 

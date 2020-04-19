@@ -16,14 +16,17 @@ const ArchivePagination = ({ details }) => {
 
   return (
     <nav className="navigation post-navigation" role="navigation">
-      <ul className="nav-links">
-        {!isFirst && (
-          <div className="nav-previous">
-            <Link to={prevPage} rel="prev">
-              <FaAngleLeft /> Newer Posts
-            </Link>
-          </div>
+      <div className="nav-links">
+
+        <div className="nav-previous"> 
+        {!isFirst && ( 
+          <Link to={prevPage} rel="prev">
+            <FaAngleLeft /> Newer Posts
+          </Link>
         )}
+        </div>
+
+        <ul className={`nav-paged`}>
         {Array.from({ length: numPages }, (_, i) => (
           <li key={`pagination-number${i + 1}`} >
             <Link to={`/${i === 0 ? '' : i + 1}`} >
@@ -31,15 +34,17 @@ const ArchivePagination = ({ details }) => {
             </Link>
           </li>
         ))}
+        </ul>
 
+        <div className="nav-next">
         {!isLast && (
-          <div className="nav-next">
-            <Link to={nextPage} rel="next">
-              Older Posts <FaAngleRight />
-            </Link>
-          </div>
+          <Link to={nextPage} rel="next">
+            Older Posts <FaAngleRight />
+          </Link>
         )}
-      </ul>
+        </div>
+
+      </div>
     </nav>
   )
 }

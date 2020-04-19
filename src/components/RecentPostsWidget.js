@@ -27,6 +27,7 @@ const RecentPostsWidget = () => (
           <h2 className="widget-title">Recent Articles</h2>
           <ul>
             {posts && posts.map(post => (
+
               <li key={post.node.slug.current}>
                 <Link to={`/${post.node.slug.current}`}>{post.node.title}</Link>
               </li>

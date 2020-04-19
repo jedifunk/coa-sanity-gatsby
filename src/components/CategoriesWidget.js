@@ -28,7 +28,7 @@ const CategoriesWidget = () => (
           <ul>
             {categories && categories.map(category => (
               <li key={category.node.slug.current}>
-                <Link to={`/category/${category.node.slug.current}`}>{category.node.title}</Link>
+                <Link to={`/${category.node.slug.current}`}>{category.node.title}</Link>
               </li>
             ))}
           </ul>

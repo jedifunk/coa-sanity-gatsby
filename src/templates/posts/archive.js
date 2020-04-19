@@ -45,7 +45,7 @@ const BlogArchive = props => {
               </div>
               <ArchivePagination details={pageContext} />
             </div>
-            <Sidebar />
+            <Sidebar page={pageContext.currentPage} />
           </div>
         </main>
       </div>
@@ -92,9 +92,12 @@ export const query = graphql`
             asset {
               _id
               url
-              fluid(maxWidth: 300) {
-                ...GatsbySanityImageFluid
-              }
+            }
+            hotspot {
+              height
+              width
+              x
+              y
             }
           }
           excerpt

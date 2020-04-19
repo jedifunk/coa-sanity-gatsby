@@ -2921,10 +2921,27 @@ header input[type="search"]:focus {
 }
 
 /* Post Nav */
+.post-navigation {
+    margin: 3rem 0;
+}
 .nav-links {
 	display: flex;
 	justify-content: space-between;
 }
+.nav-paged {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.nav-paged li + li {
+    margin-left: .25rem;
+}
+.nav-paged li a {
+    padding: 0 .5rem;
+}
+
 /* Sidebar */
 .sidebar .widget {
 	padding: 0;
