@@ -45,7 +45,7 @@ const BlogArchive = props => {
               </div>
               <ArchivePagination details={pageContext} />
             </div>
-            <Sidebar page={pageContext.currentPage} />
+            <Sidebar page={`archive`} current={pageContext.currentPage} />
           </div>
         </main>
       </div>

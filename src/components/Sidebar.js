@@ -3,13 +3,12 @@ import RecentPostsWidget from "./RecentPostsWidget"
 import LocationsWidget from './LocationsWidget'
 import CategoriesWidget from "./CategoriesWidget"
 import InstagramWidget from "./InstagramWidget"
-import { checkPropTypes } from "prop-types"
 
 const Sidebar = props => {
-
+console.log(props.page)
   return (
     <aside id="secondary" className="widget-area sidebar">
-      {props.page > 1 &&  <RecentPostsWidget /> }
+      {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
       <LocationsWidget />
       <CategoriesWidget />
       <InstagramWidget />
