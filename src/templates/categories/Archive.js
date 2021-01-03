@@ -8,13 +8,10 @@ import PostEntry from '../../components/PostEntry'
 import ArchivePagination from '../../components/ArchivePagination'
 
 const CategoryArchive = props => {
-  const {
-    data,
-    pageContext
-  } = props
-
+  
+  const data = props.data
+  
   const articleNodes = data && data.posts && mapEdgesToNodes(data.posts)
- 
 
   return (
     <Layout>
@@ -28,7 +25,7 @@ const CategoryArchive = props => {
           <main className="content grid-wrapper grid-halves">
             {articleNodes && articleNodes.map((article, i) => <PostEntry article={article} key={i} />)}
           </main>
-          <Sidebar />
+          <Sidebar {...props} />
         </div>
       </div>
     </Layout>

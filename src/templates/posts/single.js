@@ -61,27 +61,7 @@ export default SinglePost
 export const query = graphql`
   query Single($id: String!) {
     sanityArticle(id: {eq: $id}) {
-      title
-      slug {
-        current
-      }
-      _createdAt
-      author {
-        name
-      }
-      categories {
-        title
-        slug {
-          current
-        }
-      }
-      location {
-        name
-        slug {
-          current
-        }
-      }
-      _rawContent(resolveReferences: {maxDepth: 10})
+      ...SinglePostFragment
     }
   }
 `

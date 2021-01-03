@@ -2,6 +2,7 @@ import React from "react";
 import InstagramEmbed from "react-instagram-embed";
 
 const InstagramBlock = ({ node }) => {
+
   const { url } = node
 
   if (!url) {
@@ -13,6 +14,7 @@ const InstagramBlock = ({ node }) => {
       url={url}
       containerTagName="div"
       injectScript
+      className={`ig-embed`}
     />
   )
 }
