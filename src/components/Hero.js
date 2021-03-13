@@ -1,30 +1,30 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import SanityImage from 'gatsby-plugin-sanity-image'
 
-export default () => (
-  <StaticQuery query={graphql`
-    query {
-      sanitySiteSettings {
-        hpHero {
-          asset {
-            _id
-            url
-            fluid(maxWidth: 1600) {
-              ...GatsbySanityImageFluid
-            }
-          }
-          alt
-        }
-      }
-    }
-  `}
-  render={data => (
+const Hero = () => {
+  const data = useStaticQuery(query)
+  //const img = getImage(data.sanitySiteSettings.hpHero.asset.url)
+
+  return (
     <div className="hero">
-      <GatsbyImage
-        image={data.sanitySiteSettings.hpHero.childImageSharp.gatsbyImageData}
-        alt={data.sanitySiteSettings.hpHero.alt} />
+      <SanityImage {...data.sanitySiteSettings.hpHero} />
+      {/* <GatsbyImage
+        image={img}
+        alt={data.sanitySiteSettings.hpHero.alt} /> */}
     </div>
-  )}
-  />
-)
+  )
+}
+export default Hero
+
+export const query = graphql`
+query {
+  sanitySiteSettings {
+    hpHero {
+      alt
+      ...ImageWithPreview
+    }
+  }
+}
+`

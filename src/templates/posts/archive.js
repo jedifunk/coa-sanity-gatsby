@@ -1,5 +1,6 @@
 import React from "react"
 import {graphql} from 'gatsby'
+
 import {mapEdgesToNodes} from '../../lib/helpers'
 import Layout from "../../components/layout"
 import { Helmet } from 'react-helmet'
@@ -87,6 +88,7 @@ export const query = graphql`
             }
           }
           featuredImage {
+            ...ImageWithPreview
             alt
             caption
             asset {

@@ -34,6 +34,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-sanity-image',
+      options: {
+        projectId: Config.source.projectId,
+        dataset: Config.source.dataset,
+        customImageTypes: ["SanityImageFull"],
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
