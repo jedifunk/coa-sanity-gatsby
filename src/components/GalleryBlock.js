@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
+import SanityImage from 'gatsby-plugin-sanity-image'
 //import ReactHtmlParser from 'react-html-parser'
 
 const GalleryBlock = ({ node }) => {
@@ -54,14 +55,12 @@ const GalleryBlock = ({ node }) => {
           }
 console.log(img)
           return (
-            <li
-              key={index}
-              onClick={updateOnClick}
-              className="blocks-gallery-item"
-            >
+            <li key={index} className="blocks-gallery-item">
               <figure>
-                <img src={img.asset.url} alt={img.alt} />
-                <figcaption>{img.caption}</figcaption>
+                <button onClick={updateOnClick} onKeyPress={updateOnClick}>
+                  <SanityImage {...img} alt={img.alt ? img.alt : ''} />
+                </button>
+                {img.caption && <figcaption>{img.caption}</figcaption>}
               </figure>
             </li>
           )

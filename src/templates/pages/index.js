@@ -5,7 +5,8 @@ import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PortableText from '../../components/PortableText'
 
-const SinglePage = ({data}) => {
+const SinglePage = props => {
+  const data = props.data
 
   return (
     <Layout>

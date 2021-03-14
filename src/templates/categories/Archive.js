@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PostEntry from '../../components/PostEntry'
-import ArchivePagination from '../../components/ArchivePagination'
+//import ArchivePagination from '../../components/ArchivePagination'
 
 const CategoryArchive = props => {
   

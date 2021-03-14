@@ -12,6 +12,7 @@ const MapBlock = ({ node }) => {
           frameBorder="no"
           allowTransparency
           allowFullScreen
+          title="Map"
         />
       </figure>
     </div>
