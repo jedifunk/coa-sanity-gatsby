@@ -5,7 +5,7 @@ import {urlFor} from '../lib/ImageUrl'
 import SanityImage from 'gatsby-plugin-sanity-image'
 
 const FeaturedPost = ({ article }) => {
-console.log(article)
+
   return (
     <article className="featured-item">
       <figure>
@@ -17,7 +17,7 @@ console.log(article)
           <h3 className="entry-title">
             <Link to={`/${article.slug.current}`}>{article.title}</Link>
           </h3>
-          <PostMeta date={article._createdAt} author={article.author} categories={article.categories} location={article.location} />
+          <PostMeta date={article.publishDate} author={article.author} categories={article.categories} location={article.location} />
         </figcaption>
       </figure>
     </article>

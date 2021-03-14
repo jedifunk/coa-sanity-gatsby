@@ -28,7 +28,7 @@ const SinglePost = ({ data, pageContext }) => {
             >
               <header className="entry-header">
                 <h3 className="entry-title">{data.sanityArticle.title}</h3>
-                <PostMeta date={data.sanityArticle._createdAt} author={data.sanityArticle.author} categories={data.sanityArticle.categories} location={data.sanityArticle.location} />
+                <PostMeta date={data.sanityArticle.publishDate} author={data.sanityArticle.author} categories={data.sanityArticle.categories} location={data.sanityArticle.location} />
               </header>
 
               {data.sanityArticle._rawContent && <PortableText blocks={data.sanityArticle._rawContent}/>}

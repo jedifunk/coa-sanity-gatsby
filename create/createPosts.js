@@ -11,7 +11,7 @@ module.exports = async ({graphql, actions, reporter}) => {
     {
       posts: allSanityArticle(
         filter: {slug: {current: {ne: null} } }
-        sort: {fields: _createdAt, order: DESC}
+        sort: {fields: publishDate, order: DESC}
       ) {
         edges {
           node {
@@ -25,7 +25,7 @@ module.exports = async ({graphql, actions, reporter}) => {
       }
       catGroup: allSanityArticle(
         filter: {slug: {current: {ne: null} } }
-        sort: {fields: _createdAt, order: DESC}
+        sort: {fields: publishDate, order: DESC}
       ) {
         group(field: categories___slug___current) {
           fieldValue
@@ -33,7 +33,7 @@ module.exports = async ({graphql, actions, reporter}) => {
       }
       locGroup: allSanityArticle(
         filter: {slug: {current: {ne: null} } }
-        sort: {fields: _createdAt, order: DESC}
+        sort: {fields: publishDate, order: DESC}
       ) {
         group(field: location___slug___current) {
           fieldValue

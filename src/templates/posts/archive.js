@@ -59,7 +59,7 @@ export default BlogArchive
 export const query = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
     posts: allSanityArticle(
-      sort: { fields: [_createdAt], order: DESC }
+      sort: { fields: publishDate, order: DESC }
       filter: { slug: { current: { ne: null } } }
       limit: $limit
       skip: $skip
@@ -69,6 +69,7 @@ export const query = graphql`
           id
           title
           _createdAt
+          publishDate
           slug {
             current
           }

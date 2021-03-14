@@ -12,10 +12,12 @@ const Nav = () => {
   return (
     <nav id="site-navigation" className="main-navigation" role="navigation" aria-label="Primary Menu">
       <ul id="menu-primary" className="menu">
-        {items && items.map((item, i) => 
+        {items && items.map((item, i) => {
+
+          return (
           <li key={i} className="menu-item menu-item-has-children">
             <Link to={!item.page ? `/${item.customUrl}` : `/${item.page.slug.current}`} >{item.name}</Link>
-            <ul className="sub-menu">
+            {item.customUrl && <ul className="sub-menu">
               {item.page ? null : item.name === 'Logistics' ? (
                 cats && cats.map((cat, i) => (
                   <li key={i} className="menu-item"><Link to={`/${cat.node.slug.current}`}>{cat.node.title}</Link></li>
@@ -25,9 +27,10 @@ const Nav = () => {
                   <li key={i} className="menu-item"><Link to={`/${loc.node.slug.current}`}>{loc.node.name}</Link></li>
                 ))
               )}
-            </ul>
+            </ul>}
           </li>
-        )}
+          )
+        })}
       </ul>
     </nav>
   )

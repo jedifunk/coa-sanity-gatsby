@@ -7,6 +7,7 @@ export const SinglePostFragment = graphql`
       current
     }
     _createdAt
+    publishDate
     author {
       name
     }

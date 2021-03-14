@@ -52,6 +52,7 @@ const GalleryBlock = ({ node }) => {
             setPhotoIndex(index)
             setIsOpen(true)
           }
+console.log(img)
           return (
             <li
               key={index}
@@ -91,15 +92,15 @@ const GalleryBlock = ({ node }) => {
             setPhotoIndex((photoIndex + 1) % node.images.length)
           }
           enableZoom={false}
-          // imageCaption={`Camera: ${
-          //   node.images[photoIndex].mediaDetails.meta.camera
-          // }, Aperture: f/${
-          //   node.images[photoIndex].mediaDetails.meta.aperture
-          // }, ISO: ${
-          //   node.images[photoIndex].mediaDetails.meta.iso
-          // }, Shutter Speed: ${sSpeed(
-          //   node.images[photoIndex].mediaDetails.meta.shutterSpeed
-          // )}`}
+          imageCaption={`Camera: ${
+            node.images[photoIndex].asset.metadata.exif.LensModel
+          }, Aperture: f/${
+            node.images[photoIndex].asset.metadata.exif.FNumber
+          }, ISO: ${
+            node.images[photoIndex].asset.metadata.exif.ISO
+          }, Shutter Speed: ${sSpeed(
+            node.images[photoIndex].asset.metadata.exif.ShutterSpeedValue
+          )}`}
           imageTitle={node.images[photoIndex].caption}
         />
       )}
