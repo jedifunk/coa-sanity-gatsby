@@ -7,7 +7,7 @@ const Nav = () => {
 
   const items = data.sanitySiteSettings._rawSiteNav.menuItems
   const cats = data.allSanityCategory.edges
-  const locs = data.allSanityLocation.edges
+  const countries = data.allSanityCountry.edges.map(country => country.node).filter(x => x.menu)
 
   return (
     <nav id="site-navigation" className="main-navigation" role="navigation" aria-label="Primary Menu">
@@ -23,8 +23,8 @@ const Nav = () => {
                   <li key={i} className="menu-item"><Link to={`/${cat.node.slug.current}`}>{cat.node.title}</Link></li>
                 ))
               ) : (
-                locs && locs.map((loc, i) => (
-                  <li key={i} className="menu-item"><Link to={`/${loc.node.slug.current}`}>{loc.node.name}</Link></li>
+                countries && countries.map((country, i) => (
+                  <li key={i} className="menu-item"><Link to={`/${country.slug.current}`}>{country.name}</Link></li>
                 ))
               )}
             </ul>}
@@ -53,10 +53,11 @@ query Nav {
       }
     }
   }
-  allSanityLocation {
+  allSanityCountry {
     edges {
       node {
         name
+        menu
         slug {
           current
         }

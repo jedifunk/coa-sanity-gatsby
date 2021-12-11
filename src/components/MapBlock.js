@@ -10,8 +10,9 @@ const MapBlock = ({ node }) => {
           src={node.url}
           style={{ width: '100%' }}
           frameBorder="no"
-          allowTransparency
+          //allowTransparency
           allowFullScreen
+          title="Visited Countries"
         />
       </figure>
     </div>

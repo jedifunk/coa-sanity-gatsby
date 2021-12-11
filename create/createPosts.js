@@ -31,11 +31,11 @@ module.exports = async ({graphql, actions, reporter}) => {
           fieldValue
         }
       }
-      locGroup: allSanityArticle(
+      countryGroup: allSanityArticle(
         filter: {slug: {current: {ne: null} } }
         sort: {fields: publishDate, order: DESC}
       ) {
-        group(field: location___slug___current) {
+        group(field: country___slug___current) {
           fieldValue
         }
       }
@@ -97,18 +97,18 @@ module.exports = async ({graphql, actions, reporter}) => {
     reporter.info(`[choosingouradventure] create category archive: ${category.fieldValue}`)
   })
 
-  // Location Archives
-  const locations = result.data.locGroup.group
+  // Country Archives
+  const countries = result.data.countryGroup.group
 
-  locations.forEach(location => {
+  countries.forEach(country => {
     createPage({
-      path: `/${location.fieldValue}/`,
+      path: `/${country.fieldValue}/`,
       component: locationTemplate,
       context: {
-        location: location.fieldValue,
+        country: country.fieldValue,
       },
     })
-    reporter.info(`[choosingouradventure] create location archive: ${location.fieldValue}`)
+    reporter.info(`[choosingouradventure] create country archive: ${country.fieldValue}`)
   })
   
 }

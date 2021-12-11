@@ -1,6 +1,6 @@
 import React from "react"
 import RecentPostsWidget from "./RecentPostsWidget"
-import LocationsWidget from './LocationsWidget'
+import LocationsWidget from './CountryWidget'
 import CategoriesWidget from "./CategoriesWidget"
 //import InstagramWidget from "./InstagramWidget"
 

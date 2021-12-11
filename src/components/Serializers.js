@@ -4,6 +4,7 @@ import VideoEmbedBlock from './VideoEmbedBlock'
 import GalleryBlock from './GalleryBlock'
 import MapBlock from './MapBlock'
 import InstagramBlock from './InstagramBlock'
+import Mapbox from './Mapbox'
 
 const serializers = {
   types: {
@@ -12,7 +13,8 @@ const serializers = {
     gallery: GalleryBlock,
     googleMyMap: MapBlock,
     instagramPost: InstagramBlock,
-    videoEmbed: VideoEmbedBlock
+    videoEmbed: VideoEmbedBlock,
+    mapbox: Mapbox
   }
 }
 

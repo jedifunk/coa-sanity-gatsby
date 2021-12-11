@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,6 +23,7 @@ module.exports = {
       options: {
         projectId: Config.source.projectId,
         dataset: Config.source.dataset,
+        apiVersion: Config.source.apiVersion,
         watchMode: true,
 
         // a token with read permissions is required

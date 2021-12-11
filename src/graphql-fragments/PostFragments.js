@@ -17,7 +17,7 @@ export const SinglePostFragment = graphql`
         current
       }
     }
-    location {
+    country {
       name
       slug {
         current

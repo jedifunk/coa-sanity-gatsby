@@ -52,7 +52,7 @@ const GalleryBlock = ({ node }) => {
             setPhotoIndex(index)
             setIsOpen(true)
           }
-console.log(img)
+          console.log(node.images[photoIndex].asset)
           return (
             <li
               key={index}
@@ -93,7 +93,7 @@ console.log(img)
           }
           enableZoom={false}
           imageCaption={`Camera: ${
-            node.images[photoIndex].asset.metadata.exif.LensModel
+            node.images[photoIndex].asset.metadata.exif.LensModel 
           }, Aperture: f/${
             node.images[photoIndex].asset.metadata.exif.FNumber
           }, ISO: ${

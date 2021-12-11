@@ -25,10 +25,11 @@ export default RecentPostsWidget
 
 const query = graphql`
 query GetRecentPosts {
-  allSanityArticle(limit: 5) {
+  allSanityArticle(limit: 5, sort: {order: DESC, fields: publishDate}) {
     edges {
       node {
         title
+        publishDate
         slug {
           current
         }

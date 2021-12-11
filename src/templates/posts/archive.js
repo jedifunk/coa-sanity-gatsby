@@ -30,7 +30,7 @@ const BlogArchive = props => {
           {pageContext.currentPage === 1 ? 
             <div className="featured grid-wrapper grid-fourths">
             {articleNodes && articleNodes.slice(0, 4).map((article, i) => 
-              <FeaturedPost key={i} article={article} />           
+              <FeaturedPost key={i} {...article} />           
             )}
           </div>
           : null }
@@ -82,7 +82,7 @@ export const query = graphql`
               current
             }
           }
-          location {
+          country {
             name
             slug {
               current

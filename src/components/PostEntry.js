@@ -2,18 +2,18 @@ import React from "react"
 import { Link } from "gatsby"
 import PostMeta from './PostMeta'
 
-const PostEntry = ({article}) => {
+const PostEntry = props => {
 
   return (
     <article className="post" >
       <header className="entry-header">
           <h3 className="entry-title">
-              <Link to={`/${article.slug.current}`}>{article.title}</Link>
+              <Link to={`/${props.article.slug.current}`}>{props.article.title}</Link>
           </h3>
-          <PostMeta date={article._createdAt} author={article.author} categories={article.categories} location={article.location} />
+          <PostMeta {...props.article} />
       </header>
 
-      <div className="entry-content">{article.excerpt}</div>
+      <div className="entry-content">{props.article.excerpt}</div>
     </article>
   )
 }

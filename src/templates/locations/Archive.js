@@ -5,10 +5,10 @@ import Layout from "../../components/layout"
 import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PostEntry from '../../components/PostEntry'
-import ArchivePagination from '../../components/ArchivePagination'
+//import ArchivePagination from '../../components/ArchivePagination'
 
 const LocationArchive = props => {
-  
+
   const data = props.data
 
   const articleNodes = data && data.posts && mapEdgesToNodes(data.posts)
@@ -18,7 +18,7 @@ const LocationArchive = props => {
       <Helmet bodyAttributes={{ class: 'archive location' }} />
       <div id="primary" className="content-area wrapper">
         <header className="page-header">
-          <h1 className="page-title">{data.locTitle.name}</h1>
+          <h1 className="page-title">{data.countryTitle.name}</h1>
         </header>
 
         <div className="grid-wrapper grid-main">
@@ -35,16 +35,17 @@ const LocationArchive = props => {
 export default LocationArchive
 
 export const pageQuery = graphql`
-  query($location: String) {
+  query($country: String) {
     posts: allSanityArticle(
-      sort: { fields: [_createdAt], order: DESC }
-      filter: {location: {slug: {current: {eq: $location}}}}
+      sort: { fields: [publishDate], order: DESC }
+      filter: {country: {slug: {current: {eq: $country}}}}
     ) {
       edges {
         node {
           id
           title
           _createdAt
+          publishDate
           slug {
             current
           }
@@ -57,7 +58,7 @@ export const pageQuery = graphql`
               current
             }
           }
-          location {
+          country {
             name
             slug {
               current
@@ -67,7 +68,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    locTitle: sanityLocation(slug: {current: {eq: $location}}) {
+    countryTitle: sanityCountry(slug: {current: {eq: $country}}) {
       name
     }
   }

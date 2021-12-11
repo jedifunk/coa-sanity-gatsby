@@ -5,12 +5,12 @@ import Layout from "../../components/layout"
 import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PostEntry from '../../components/PostEntry'
-import ArchivePagination from '../../components/ArchivePagination'
+//import ArchivePagination from '../../components/ArchivePagination'
 
 const CategoryArchive = props => {
-  
+
   const data = props.data
-  
+
   const articleNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
   return (
@@ -46,6 +46,7 @@ export const pageQuery = graphql`
           id
           title
           _createdAt
+          publishDate
           slug {
             current
           }
