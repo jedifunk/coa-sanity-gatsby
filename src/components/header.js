@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import Nav from "./Navigation"
 //import SearchInput from "./Search/input"
 
-
 const Header = () => {
 
   // Scroll function

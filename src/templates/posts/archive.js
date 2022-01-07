@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql} from 'gatsby'
 
-import {mapEdgesToNodes} from '../../lib/helpers'
+import {mapEdgesToNodes} from '../../lib/Helpers'
 import Layout from "../../components/layout"
 import { Helmet } from 'react-helmet'
 import Hero from '../../components/Hero'
