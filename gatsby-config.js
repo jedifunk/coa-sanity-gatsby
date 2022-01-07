@@ -1,4 +1,6 @@
-const Config = require('./config')
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -21,10 +23,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: Config.source.projectId,
-        dataset: Config.source.dataset,
-        apiVersion: Config.source.apiVersion,
-        watchMode: true,
+        projectId: process.env.PROJECT_ID,
+        dataset: process.env.DATASET,
+        apiVersion: process.env.API_VERSION,
+        watchMode: process.env.WATCHMODE,
 
         // a token with read permissions is required
         // if you have a private dataset
@@ -38,8 +40,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sanity-image',
       options: {
-        projectId: Config.source.projectId,
-        dataset: Config.source.dataset,
+        projectId: process.env.PROJECT_ID,
+        dataset: process.env.DATASET,
         customImageTypes: ["SanityImageFull"],
       }
     },
@@ -62,7 +64,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-instagram`,
     //   options: {
-    //     username: Config.social.iGUsername,
+    //     username: process.env.IG_USERNAME,
     //   },
     // },
     
