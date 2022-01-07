@@ -1,4 +1,4 @@
-import Image from './Image'
+import Image from './image'
 import VideoBlock from './Video'
 import VideoEmbedBlock from './VideoEmbedBlock'
 import GalleryBlock from './GalleryBlock'
