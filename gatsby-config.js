@@ -23,10 +23,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: process.env.PROJECT_ID,
-        dataset: process.env.DATASET,
-        apiVersion: process.env.API_VERSION,
-        watchMode: process.env.WATCHMODE,
+        projectId: process.env.GATSBY_PROJECT_ID,
+        dataset: process.env.GATSBY_DATASET,
+        apiVersion: process.env.GATSBY_API_VERSION,
+        watchMode: process.env.GATSBY_WATCHMODE,
 
         // a token with read permissions is required
         // if you have a private dataset
@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sanity-image',
       options: {
-        projectId: process.env.PROJECT_ID,
-        dataset: process.env.DATASET,
+        projectId: process.env.GATSBY_PROJECT_ID,
+        dataset: process.env.GATSBY_DATASET,
         customImageTypes: ["SanityImageFull"],
       }
     },
@@ -64,7 +64,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-instagram`,
     //   options: {
-    //     username: process.env.IG_USERNAME,
+    //     username: process.env.GATSBY_IG_USERNAME,
     //   },
     // },
     
