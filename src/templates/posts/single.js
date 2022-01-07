@@ -6,7 +6,7 @@ import PostPagination from '../../components/PostPagination'
 import Sidebar from "../../components/Sidebar"
 import PostMeta from '../../components/PostMeta'
 import PortableText from '../../components/PortableText'
-import SocialShare from '../../components/SocialShare'
+//import SocialShare from '../../components/SocialShare'
 const Config = require('../../../config')
 // import { TransitionLink } from "gatsby-plugin-transition-link"
 
@@ -33,16 +33,16 @@ const SinglePost = ({ data, pageContext }) => {
 
               {data.sanityArticle._rawContent && <PortableText blocks={data.sanityArticle._rawContent}/>}
 
-              <SocialShare
+              {/* <SocialShare
                 socialConfig={{
                   config: {
-                    url: `${Config.source.url}/${data.sanityArticle.slug.current}`,
+                    url: `/${data.sanityArticle.slug.current}`,
                   },
                 }}
                 title={data.sanityArticle.title}
                 //featuredImage={featuredImage}
                 twitterHandle={Config.social.twitterHandle}
-              />
+              /> */}
 
             </article>
 
