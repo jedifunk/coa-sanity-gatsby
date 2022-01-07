@@ -137,7 +137,7 @@ const Map = () => {
               'interpolate',
               ['linear'], ['zoom'],
               5, 'rgba(0,0,0,1)',
-              6, 'rgba(212,175,55,1)',
+              6, 'rgba(136,99,0,1)',
             ],
             'fill-opacity': .25,
           }}
