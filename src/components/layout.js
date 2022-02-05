@@ -2,7 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from './header'
 import Footer from './Footer'
-import "./layout.css"
+
+import "../styles/main.css"
 
 const Layout = ({ children }) => {
 
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={"Choosing Our Adventure"} />
       <div id="content" className="site-content">
-          {children}
+        {children}
       </div>
       <Footer />
     </>

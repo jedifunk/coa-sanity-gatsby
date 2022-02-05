@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 
 import {mapEdgesToNodes} from '../../lib/Helpers'
 import Layout from "../../components/layout"
+import Seo from '../../components/Seo'
 import { Helmet } from 'react-helmet'
 import Hero from '../../components/Hero'
 import FeaturedPost from '../../components/FeaturedPost'
@@ -22,6 +23,14 @@ const BlogArchive = props => {
 
   return (
     <Layout>
+      <Seo
+        // title={}
+        //description={data.sanityArticle.title}
+        // image={
+        //   data.sanityArticle.featuredImage && data.sanityArticle.featuredImage.asset.url
+        // }
+        pathname={`/`}
+      />
       <Helmet bodyAttributes={{ class: `home blog ${paged}` }} />
       {pageContext.currentPage === 1 ? <Hero /> : null }
 

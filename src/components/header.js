@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from 'gatsby'
-import Nav from "./Navigation"
+import MainMenu from "./MainMenu"
+//import Nav from "./Navigation"
 //import SearchInput from "./Search/input"
 
 const Header = () => {
@@ -26,10 +27,10 @@ const Header = () => {
   })
   
   return(
-    <header id="masthead" className="site-header" role="banner">
-      <div className="wrapper flex-wrapper">
+    <header className="site-header">
+      <div className="wrapper">
         <div className="site-branding"><h1 className="site-title"><Link to="/">Choosing Our Adventure</Link></h1></div>
-          <Nav />
+          <MainMenu />
           {/* <SearchInput /> */}
         </div>
     </header>

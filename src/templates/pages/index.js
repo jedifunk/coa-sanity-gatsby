@@ -1,6 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from "../../components/layout"
+import Seo from '../../components/Seo'
 import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PortableText from '../../components/PortableText'
@@ -9,7 +10,15 @@ const SinglePage = ({data}) => {
 
   return (
     <Layout>
-    <Helmet bodyAttributes={{ class: 'page' }} />
+      <Seo
+        title={data.sanityPage.title && data.sanityPage.title}
+        //description={data.sanityPage.title}
+        image={
+          data.sanityPage.featuredImage && data.sanityPage.featuredImage
+        }
+        pathname={data.sanityPage.slug.current}
+      />
+      <Helmet bodyAttributes={{ class: 'page' }} />
       <div id="primary" className="content-area wrapper">
         <div className="grid-wrapper grid-main">
           <main id="main" className="site-main" role="main">

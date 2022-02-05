@@ -11,6 +11,22 @@ export const SinglePostFragment = graphql`
     author {
       name
     }
+    excerpt
+    featuredImage {
+      ...ImageWithPreview
+      alt
+      caption
+      asset {
+        _id
+        url
+      }
+      hotspot {
+        height
+        width
+        x
+        y
+      }
+    }
     categories {
       title
       slug {

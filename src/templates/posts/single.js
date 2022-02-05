@@ -1,6 +1,7 @@
 import React from "react"
 import {graphql} from 'gatsby'
 import Layout from "../../components/layout"
+import Seo from '../../components/Seo'
 import { Helmet } from 'react-helmet'
 import PostPagination from '../../components/PostPagination'
 import Sidebar from "../../components/Sidebar"
@@ -18,6 +19,14 @@ const SinglePost = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Seo
+        title={data.sanityArticle.title && data.sanityArticle.title}
+        description={data.sanityArticle.excerpt && data.sanityArticle.excerpt}
+        image={
+          data.sanityArticle.featuredImage && data.sanityArticle.featuredImage
+        }
+        pathname={data.sanityArticle.slug.current}
+      />
       <Helmet bodyAttributes={{ class: "single article" }} />
       <div id="primary" className="content-area wrapper">
         <div className="grid-wrapper grid-main">

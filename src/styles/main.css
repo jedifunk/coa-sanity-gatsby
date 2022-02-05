@@ -1,0 +1,9 @@
+@import './variables.css';
+@import "./layout.css";
+
+@import "./components/header.css";
+@import "./components/burger.css";
+@import "./components/menu.css";
+@import "./components/nav.css";
+
+@import "./components/featured-post.css";

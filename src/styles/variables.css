@@ -1,0 +1,7 @@
+:root {
+  /* Colors */
+  --black: rgba(0,0,0,1);
+
+  /* Animation */
+  --base-transition: 0.33s ease-in-out;
+}

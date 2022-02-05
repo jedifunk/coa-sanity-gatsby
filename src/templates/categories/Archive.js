@@ -2,6 +2,7 @@ import React from "react"
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes} from '../../lib/Helpers'
 import Layout from "../../components/layout"
+import Seo from '../../components/Seo'
 import { Helmet } from 'react-helmet'
 import Sidebar from "../../components/Sidebar"
 import PostEntry from '../../components/PostEntry'
@@ -15,6 +16,14 @@ const CategoryArchive = props => {
 
   return (
     <Layout>
+      <Seo
+        title={data.catTitle.title && data.catTitle.title}
+        // description={data.sanityArticle.excerpt && data.sanityArticle.excerpt}
+        // image={
+        //   data.sanityArticle.featuredImage && data.sanityArticle.featuredImage.asset.url
+        // }
+        pathname={props.location.pathname}
+      />
       <Helmet bodyAttributes={{ class: 'archive category' }} />
       <div id="primary" className="content-area wrapper">
         <header className="page-header">

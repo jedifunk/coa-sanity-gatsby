@@ -62,6 +62,17 @@ module.exports = {
       }
     },
     // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: 'Choosing Our Adventure',
+    //     start_url: '/',
+    //     background_color: `#ffcd00`,
+    //     theme_color: `#a2466c`,
+    //     display: `standalone`,
+    //     //icon: `${__dirname}/src/images/lejeune-logo.png`
+    //   }
+    // }
+    // {
     //   resolve: `gatsby-source-instagram`,
     //   options: {
     //     username: process.env.GATSBY_IG_USERNAME,
