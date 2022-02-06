@@ -8,7 +8,7 @@ const CountryWidget = () => {
 
   return (
     <section id="countries" className="widget widget_cloud widget_countries">
-      <h2 className="widget-title">Countries</h2>
+      <h3 className="widget-title">Countries</h3>
       <ul>
         {countries && countries.map(country => (
           <li key={country.slug.current}>

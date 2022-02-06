@@ -2667,41 +2667,6 @@ figure a {
 }
 
 /****** My Stuff *****/
-* {
-    box-sizing: border-box;
-}
-.wrapper {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-.flex-wrapper {
-	display: block;
-}
-.grid-wrapper {
-	display: block;
-}
-.grid-main {
-    grid-template-columns: [main] 2fr [sidebar] 1fr;
-	grid-gap: 5rem;
-}
-.grid-halves {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-}
-.grid-thirds {
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: .5rem;
-}
-.grid-fourths {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-}
-figure {
-	width: 100% !important;
-}
-/* Nav */
 
 
 /* Content */
@@ -2737,42 +2702,7 @@ figure {
 	text-decoration: none;
 }
 
-/* Featured */
-.featured {
-	margin-bottom: 2rem;
-}
-.featured.flex-wrapper {
-	justify-content: space-between;
-}
-.featured-item figure {
-	position: relative;
-	background-color: black;
-}
-.featured-item figure img {
-	opacity: 1;
-	transition: opacity 0.5s ease;
-}
-.featured-item figure:hover img {
-	opacity: .7;
-	transition: opacity 0.5s ease;
-}
-.featured-item figure figcaption {
-	position: absolute;
-	bottom: 15px;
-	margin: 0 30px 0px 0;
-	padding: 10px 15px;
-	background-color: rgba(0, 0, 0, 0.4);
-	color: white;
-}
-.featured-item .entry-title {
-	border-bottom-color: white;
-}
-.featured-item .entry-title a,
-.featured-item .entry-title a:visited,
-.featured-item .entry-meta a,
-.featured-item .entry-meta a:visited {
-	color: white;
-}
+
 /* Single Post */
 .social-share {
     margin: 1rem 0;
@@ -2822,56 +2752,9 @@ figure {
 	border-bottom: 1px dotted rgba(212,175,55,1);
 }
 
-/* Post Nav */
-.post-navigation {
-    margin: 3rem 0;
-}
-.nav-links {
-	display: flex;
-	justify-content: space-between;
-}
-.nav-paged {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-}
-.nav-paged li + li {
-    margin-left: .25rem;
-}
-.nav-paged li a {
-    padding: 0 .5rem;
-}
-
-/* Sidebar */
-.sidebar .widget {
-	padding: 0;
-}
-.sidebar h2 {
-	font-size: 1.1rem;
-	text-transform: uppercase;
-	border-bottom: 1px dotted black;
-}
-.widget_categories ul,
-.widget_cloud ul {
-	display: flex;
-	flex-wrap: wrap;
-}
-.widget_categories ul li,
-.widget_cloud ul li {
-	margin: 2px;
-}
-
-/*** Page Transitions ***/
-
-
 
 /*** Mobile ***/
 @media (min-width: 500px) {
-    .flex-wrapper {
-        display: flex;
-    }
     .inner-grid,
     .grid-wrapper {
         display: grid;

@@ -1,0 +1,35 @@
+.featured {
+	margin-bottom: 2rem;
+}
+.featured.flex-wrapper {
+	justify-content: space-between;
+}
+.featured-item figure {
+	position: relative;
+	background-color: black;
+}
+.featured-item figure img {
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+.featured-item figure:hover img {
+	opacity: .7;
+	transition: opacity 0.5s ease;
+}
+.featured-item figure figcaption {
+	position: absolute;
+	bottom: 15px;
+	margin: 0 30px 0px 0;
+	padding: 10px 15px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+}
+.featured-item .entry-title {
+	border-bottom-color: white;
+}
+.featured-item .entry-title a,
+.featured-item .entry-title a:visited,
+.featured-item .entry-meta a,
+.featured-item .entry-meta a:visited {
+	color: white;
+}

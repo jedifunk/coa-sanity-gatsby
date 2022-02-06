@@ -1,0 +1,18 @@
+/* Sidebar */
+.sidebar .widget {
+	padding: 0;
+}
+.sidebar h3 {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	border-bottom: 1px dotted black;
+}
+.widget_categories ul,
+.widget_cloud ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+.widget_categories ul li,
+.widget_cloud ul li {
+	margin: 2px;
+}

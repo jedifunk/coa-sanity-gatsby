@@ -1,5 +1,10 @@
 @import './variables.css';
-@import "./layout.css";
+@import "./original.css";
+
+@import './core/layout.css';
+@import './core/media.css';
+@import './core/typography.css';
+@import './core/branding.css';
 
 @import "./components/header.css";
 @import "./components/burger.css";
@@ -7,3 +12,5 @@
 @import "./components/nav.css";
 
 @import "./components/featured-post.css";
+@import './components/sidebar.css';
+@import './components/pagination.css';

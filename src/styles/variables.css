@@ -1,6 +1,12 @@
 :root {
   /* Colors */
   --black: rgba(0,0,0,1);
+  --off-black: rgba(64, 64, 64, 1);
+  --gold: rgba(212,175,55,1);
+
+  /* Typography */
+  --body-font: 'Raleway', sans-serif;
+  --headline-font: 'Playfair Display', serif;
 
   /* Animation */
   --base-transition: 0.33s ease-in-out;

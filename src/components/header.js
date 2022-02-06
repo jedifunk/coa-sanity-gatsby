@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from 'gatsby'
 import MainMenu from "./MainMenu"
-//import Nav from "./Navigation"
 //import SearchInput from "./Search/input"
 
 const Header = () => {

@@ -8,7 +8,7 @@ const RecentPostsWidget = () => {
 
   return (
     <section id="recent-posts-2" className="widget widget_recent_entries">
-      <h2 className="widget-title">Recent Articles</h2>
+      <h3 className="widget-title">Recent Articles</h3>
       <ul>
         {posts && posts.map(post => (
 

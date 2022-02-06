@@ -8,7 +8,7 @@ const CategoriesWidget = () => {
 
   return (
     <section id="categories-2" className="widget widget_cloud widget_categories">
-      <h2 className="widget-title">Categories</h2>
+      <h3 className="widget-title">Categories</h3>
       <ul>
         {categories && categories.map(category => (
           <li key={category.node.slug.current}>

@@ -6,7 +6,7 @@
   height: 44px;
 	z-index: 100;
 	background-color: white;
-  box-shadow: 0 0 12px -6px black;
+  box-shadow: 0 0 5px -3px var(--black);
   margin-bottom: 2rem;
 }
 .site-header > div {
@@ -16,15 +16,6 @@
 .site-title {
 	margin: 0;
 	line-height: 1;
-}
-.home .site-header {
-    background-color: rgba(255,255,255,.4);
-    box-shadow: 0 0 12px -6px transparent;
-		transition: all .5s ease-in-out;
-}
-.home .site-header.scrolled {
-    background-color: rgba(255,255,255,1);
-    box-shadow: 0 0 12px -6px black;
 }
 .home .site-header {
 	margin-bottom: 0;
@@ -44,26 +35,4 @@ header .flex-wrapper {
 .site-title a:hover,
 .site-title a:active {
 	color: black;
-}
-header .searchform {
-    display: none;
-}
-
-header input[type="search"] {
-	border: transparent;
-	background-color: transparent;
-}
-header input[type="search"]:focus {
-	outline: none;
-}
-@media (min-width: 500px) {
-  header .searchform {
-    display: block;
-  }
-}
-@media (min-width: 769px) {
-  .site-header {
-    position: fixed;
-    margin-bottom: 0;
-  }
 }

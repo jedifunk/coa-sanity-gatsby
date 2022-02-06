@@ -1,15 +1,19 @@
 import React from 'react'
-import { FacebookShareButton, TwitterShareButton, PinterestShareButton, FacebookIcon, TwitterIcon, PinterestIcon, } from 'react-share'
+import { useStaticQuery, graphql } from 'gatsby'
+import { FacebookShareButton, TwitterShareButton, PinterestShareButton, EmailShareButton, FacebookIcon, TwitterIcon, PinterestIcon, EmailIcon } from 'react-share'
 
 const SocialShare = ({ socialConfig, title, featuredImage, twitterHandle }) => {
     
+    const site = useStaticQuery(query)
+    const { siteUrl, siteTitle, hpHero  } = site.sanitySiteSettings
+
     return(
     <div className="social-share">
         <ul className="social-share-list">
             <li className="social-item">
                 <FacebookShareButton 
-                    url={socialConfig.config.url} 
-                    quote={title} 
+                    url={`${siteUrl}${socialConfig.config.url}`}
+                    quote={`${title} | ${siteTitle}`} 
                     className="facebook"
                 >
                     <FacebookIcon size={32} round />
@@ -17,27 +21,53 @@ const SocialShare = ({ socialConfig, title, featuredImage, twitterHandle }) => {
             </li>
             <li className="social-item">
                 <TwitterShareButton 
-                    url={socialConfig.config.url} 
+                    url={`${siteUrl}${socialConfig.config.url}`} 
                     via={twitterHandle.split('@').join('')}
-                    title={title}
+                    title={`${title} | ${siteTitle}`}
                     hashtags={["choosingouradventure"]}
                     className="twitter"
                 >
                     <TwitterIcon size={32} round />
                 </TwitterShareButton>
             </li>
-            {/* <li className="social-item">
+            <li className="social-item">
                 <PinterestShareButton 
-                    url={socialConfig.config.url} 
-                    media={featuredImage && featuredImage.sourceUrl}
+                    url={`${siteUrl}${socialConfig.config.url}`} 
+                    media={featuredImage ? featuredImage.asset.url : hpHero.asset.url}
+                    descrption={`${title} | ${siteTitle}`}
                     className="pinterest"
                 >
                     <PinterestIcon size={32} round />
                 </PinterestShareButton>
-            </li> */}
+            </li>
+            <li className="social-item">
+                <EmailShareButton
+                    url={`${siteUrl}${socialConfig.config.url}`}
+                    subject={`${title} | ${siteTitle}`}
+                    body={`Interesting article I came across. Check it out.`}
+                    className="email"
+                >
+                    <EmailIcon size={32} round />
+                </EmailShareButton>
+            </li>
         </ul>
     </div>
     )
 }
 
 export default SocialShare
+
+const query = graphql`
+query SiteMeta {
+    sanitySiteSettings {
+        siteTitle
+        siteUrl
+        hpHero {
+            asset {
+              id
+              url
+            }
+          }
+    }
+}
+`

@@ -11,12 +11,12 @@ const FeaturedPost = article => {
       <figure>
         <Link to={`/${article.slug.current}`}>
           {/* {article.featuredImage && <SanityImage {...article.featuredImage} width={300} height={500} />} */}
-          {article.featuredImage && <img src={urlFor(article.featuredImage).width(300).height(500).url()} alt={article.featuredImage.alt ? article.featuredImage.alt : ''} />}
+          {article.featuredImage && <img src={urlFor(article.featuredImage).width(400).height(500).fit('min').auto('format').url()} alt={article.featuredImage.alt ? article.featuredImage.alt : ''} />}
         </Link>
         <figcaption>
-          <h3 className="entry-title">
+          <h2 className="entry-title">
             <Link to={`/${article.slug.current}`}>{article.title}</Link>
-          </h3>
+          </h2>
           <PostMeta {...article} />
         </figcaption>
       </figure>
