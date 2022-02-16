@@ -36,7 +36,7 @@ const SinglePost = ({ data, pageContext }) => {
               className={`post type-post status-publish format-standard hentry category-react tag-accessibility tag-gatsby entry`}
             >
               <header className="entry-header">
-                <h3 className="entry-title">{data.sanityArticle.title}</h3>
+                <h2 className="entry-title">{data.sanityArticle.title}</h2>
                 <PostMeta date={data.sanityArticle.publishDate} author={data.sanityArticle.author} categories={data.sanityArticle.categories} country={data.sanityArticle.country} />
               </header>
 

@@ -56,7 +56,8 @@ module.exports = {
           },
           {
             family: 'Raleway',
-            weights: [300, 600]
+            variable: true,
+            weights: ['300..600']
           }
         ]
       }
