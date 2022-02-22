@@ -62,6 +62,14 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TC542ZZD",
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
