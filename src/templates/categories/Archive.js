@@ -32,7 +32,7 @@ const CategoryArchive = props => {
 
         <div className="grid-wrapper grid-main">
           <main className="content grid-wrapper grid-halves">
-            {articleNodes && articleNodes.map((article, i) => <PostEntry article={article} key={i} />)}
+            {articleNodes && articleNodes.map((article, i) => <PostEntry {...article} key={i} />)}
           </main>
           <Sidebar {...props} />
         </div>

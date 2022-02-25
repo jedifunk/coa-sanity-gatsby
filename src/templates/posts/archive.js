@@ -48,9 +48,9 @@ const BlogArchive = props => {
             <div>
               <div className="content grid-wrapper grid-halves">
                 {pageContext.currentPage === 1 ? 
-                  articleNodes && articleNodes.slice(4).map((article, i) => <PostEntry article={article} key={i} />)
+                  articleNodes && articleNodes.slice(4).map((article, i) => <PostEntry {...article} key={i} />)
                 :
-                  articleNodes && articleNodes.map((article, i) => <PostEntry article={article} key={i} />)
+                  articleNodes && articleNodes.map((article, i) => <PostEntry {...article} key={i} />)
                 }
               </div>
               <ArchivePagination details={pageContext} />

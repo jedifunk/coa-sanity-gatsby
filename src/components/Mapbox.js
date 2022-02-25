@@ -4,7 +4,9 @@ import ReactMapboxGl, {Layer, Source, Feature, Image, Popup, MapContext, ZoomCon
 //import {GrLocationPin as Pin} from 'react-icons/gr'
 import pin from '../assets/images/iconmonstr-location-1-240.png'
 import box from '@turf/bbox'
+import mapboxgl from '!mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+//mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 const Mb = ReactMapboxGl({
   accessToken: `pk.eyJ1IjoiamVkaWZ1bmsiLCJhIjoiY2ttOGo0Y3Z2MThobzJvczNjZm4yaWc2dCJ9.6C8Npb2Zr9KUCkT8pq57RQ`

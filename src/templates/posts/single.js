@@ -16,10 +16,12 @@ const SinglePost = ({ data, pageContext }) => {
     previous,
     next
   } = pageContext
-
+  const article = data.sanityArticle
+  
   return (
     <Layout>
       <Seo
+      
         title={data.sanityArticle.title && data.sanityArticle.title}
         description={data.sanityArticle.excerpt && data.sanityArticle.excerpt}
         image={
@@ -37,7 +39,7 @@ const SinglePost = ({ data, pageContext }) => {
             >
               <header className="entry-header">
                 <h2 className="entry-title">{data.sanityArticle.title}</h2>
-                <PostMeta date={data.sanityArticle.publishDate} author={data.sanityArticle.author} categories={data.sanityArticle.categories} country={data.sanityArticle.country} />
+                <PostMeta {...article} />
               </header>
 
               {data.sanityArticle._rawContent && <PortableText blocks={data.sanityArticle._rawContent}/>}
