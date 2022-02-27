@@ -33,7 +33,8 @@
     "react-instagram-embed": "^3.0.0",
     "react-mapbox-gl": "^5.1.1",
     "react-player": "^2.9.0",
-    "react-share": "^4.4.0"
+    "react-share": "^4.4.0",
+    "worker-loader": "^3.0.8"
   },
   "devDependencies": {
     "prettier": "^2.5.1"
