@@ -5,6 +5,7 @@ import GalleryBlock from './GalleryBlock'
 import MapBlock from './MapBlock'
 import InstagramBlock from './InstagramBlock'
 import Mapbox from './Mapbox'
+import Quotation from './Quotation'
 
 const serializers = {
   types: {
@@ -14,7 +15,8 @@ const serializers = {
     googleMyMap: MapBlock,
     instagramPost: InstagramBlock,
     videoEmbed: VideoEmbedBlock,
-    mapbox: Mapbox
+    mapbox: Mapbox,
+    quotation: Quotation,
   }
 }
 
