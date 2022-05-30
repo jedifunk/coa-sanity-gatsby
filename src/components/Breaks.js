@@ -2,9 +2,11 @@ import React from 'react'
 
 const Break = ({ node }) => {
 
-  return (
-    <hr />
-  )
+  if (node.horizontal === 'small break') {
+    return <hr className='sm' />
+  } else {
+    return <hr />
+  }
 
 }
 export default Break

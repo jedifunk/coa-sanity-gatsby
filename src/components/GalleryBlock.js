@@ -52,7 +52,7 @@ const GalleryBlock = ({ node }) => {
             setPhotoIndex(index)
             setIsOpen(true)
           }
-          console.log(node.images[photoIndex].asset)
+          
           return (
             <li
               key={index}
@@ -99,7 +99,7 @@ const GalleryBlock = ({ node }) => {
           }, ISO: ${
             node.images[photoIndex].asset.metadata.exif.ISO
           }, Shutter Speed: ${sSpeed(
-            node.images[photoIndex].asset.metadata.exif.ShutterSpeedValue
+            node.images[photoIndex].asset.metadata.exif.ExposureTime
           )}`}
           imageTitle={node.images[photoIndex].caption}
         />

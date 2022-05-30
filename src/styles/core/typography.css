@@ -11,7 +11,11 @@ h1,h2,h3,h4,h5,h6 {
 hr {
   width: 75%;
   text-align: center;
-  border: 0;
-  height: 1px;
-  background-color: black;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 1.5em;
+}
+hr.sm {
+  width: 25%;
+  border-bottom: 1px dotted black;
 }
