@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Lightbox from 'react-image-lightbox'
+import {BiExpandAlt} from 'react-icons/bi'
 import 'react-image-lightbox/style.css'
 //import ReactHtmlParser from 'react-html-parser'
 
@@ -60,6 +61,7 @@ const GalleryBlock = ({ node }) => {
               className="blocks-gallery-item"
             >
               <figure>
+                <BiExpandAlt/>
                 <img src={img.asset.url} alt={img.alt} />
                 <figcaption>{img.caption}</figcaption>
               </figure>
