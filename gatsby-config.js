@@ -84,7 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram-all`,
       options: {
-        access_token: "",
+        access_token: process.env.GATSBY_IG_TOKEN,
         limit: 9,
       }
     }
