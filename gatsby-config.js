@@ -1,7 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-const instagramData = require("./jedifunk_ig.json")
 
 module.exports = {
   siteMetadata: {
