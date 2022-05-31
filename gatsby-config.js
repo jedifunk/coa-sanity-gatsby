@@ -1,6 +1,7 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+const instagramData = require("./jedifunk_ig.json")
 
 module.exports = {
   siteMetadata: {
@@ -81,12 +82,13 @@ module.exports = {
     //     //icon: `${__dirname}/src/images/lejeune-logo.png`
     //   }
     // }
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     username: process.env.GATSBY_IG_USERNAME,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: "",
+        limit: 9,
+      }
+    }
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
