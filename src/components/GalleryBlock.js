@@ -1,13 +1,10 @@
 import React, { useState } from "react"
+import SanityImage from 'gatsby-plugin-sanity-image'
 import Lightbox from 'react-image-lightbox'
 import {BiExpandAlt} from 'react-icons/bi'
 import 'react-image-lightbox/style.css'
-//import ReactHtmlParser from 'react-html-parser'
 
 const GalleryBlock = ({ node }) => {
-  //console.log(node)
-  
-  //const {columns, images, imageCrop, align, caption} = attributes
   
   // check for null value... mostly for older posts that randomly return null
   const cols = (node.columns != null) ? node.columns : 3
@@ -62,8 +59,8 @@ const GalleryBlock = ({ node }) => {
             >
               <figure>
                 <BiExpandAlt/>
-                <img src={img.asset.url} alt={img.alt} />
-                <figcaption>{img.caption}</figcaption>
+                <SanityImage {...img} width={500} />
+                {img.caption && <figcaption>{img.caption}</figcaption>}
               </figure>
             </li>
           )
