@@ -66,6 +66,7 @@ const InstagramBlock = ({ node }) => {
             width: "100%"
           }}
           target="_blank"
+          rel="noreferrer"
         >
           <div
             style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
@@ -296,6 +297,7 @@ const InstagramBlock = ({ node }) => {
               textDecoration: "none"
             }}
             target="_blank"
+            rel="noreferrer"
           >
             A post shared by Bryce Flory (@jedifunk)
           </a>

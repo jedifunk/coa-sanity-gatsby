@@ -35,7 +35,7 @@ export default InstagramWidget
 
 const IG_QUERY = graphql`
   query myQuery {
-    allInstagramContent(limit: 9) {
+    allInstagramContent(sort: {fields: timestamp, order: DESC}, limit: 9) {
       distinct(field: username)
       edges {
         node {
