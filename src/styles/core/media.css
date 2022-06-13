@@ -2,7 +2,9 @@ figure {
 	width: 100% !important;
 }
 figcaption {
-	padding-left: 5px;
 	font-size: .9rem;
 	font-style: italic;
+}
+figure.img-full {
+	margin-bottom: 1.5rem;
 }

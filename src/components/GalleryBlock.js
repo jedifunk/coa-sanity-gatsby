@@ -42,8 +42,8 @@ const GalleryBlock = ({ node }) => {
   }
 
   return (
-    <figure className={`wp-block-gallery columns-${cols} is-cropped`}>
-      <ul className="blocks-gallery-grid">
+    <>
+      <ul className={`blocks-gallery-grid columns-${cols} is-cropped`}>
         {node.images.map((img, index) => {
           // setup onclick function to handle state change
           function updateOnClick() {
@@ -103,7 +103,7 @@ const GalleryBlock = ({ node }) => {
           imageTitle={node.images[photoIndex].caption}
         />
       )}
-    </figure>
+    </>
   )
 
 }
