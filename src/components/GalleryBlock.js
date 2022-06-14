@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import SanityImage from 'gatsby-plugin-sanity-image'
 import Lightbox from 'react-image-lightbox'
 import {BiExpandAlt} from 'react-icons/bi'
+import { sSpeed } from "../lib/Helpers"
 import 'react-image-lightbox/style.css'
 
 const GalleryBlock = ({ node }) => {
@@ -12,34 +13,6 @@ const GalleryBlock = ({ node }) => {
   // Set State for Lightbox
   const [photoIndex, setPhotoIndex] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
-
-  // Shutter Speed conversion function
-  function sSpeed(d) {
-    if (d >= 1) {
-      return Math.round(d) + "s"
-    }
-    var df = 1,
-      top = 1,
-      bot = 1
-    var tol = 1e-8 // seems to allow for d > 1e-4
-    while (df !== d && Math.abs(df - d) > tol) {
-      if (df < d) {
-        top += 1
-      } else {
-        bot += 1
-        top = parseInt(d * bot, 10)
-      }
-      df = top / bot
-    }
-    if (top > 1) {
-      bot = Math.round(bot / top)
-      top = 1
-    }
-    if (bot <= 1) {
-      return "1s"
-    }
-    return top + "/" + bot + "s"
-  }
 
   return (
     <>
