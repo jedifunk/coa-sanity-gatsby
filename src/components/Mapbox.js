@@ -3,6 +3,8 @@ import {useStaticQuery, graphql} from 'gatsby'
 import Map, {Source, Layer, NavigationControl} from 'react-map-gl'
 import bbox from '@turf/bbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import mapboxgl from 'mapbox-gl'
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default
 
 const MB_TOKEN = `pk.eyJ1IjoiamVkaWZ1bmsiLCJhIjoiY2ttOGo0Y3Z2MThobzJvczNjZm4yaWc2dCJ9.6C8Npb2Zr9KUCkT8pq57RQ`
 
