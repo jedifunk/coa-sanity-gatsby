@@ -44,7 +44,7 @@ const IG_QUERY = graphql`
           caption
           localImage {
             childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 500, height: 500)
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 200, height: 200)
             }
           }
         }

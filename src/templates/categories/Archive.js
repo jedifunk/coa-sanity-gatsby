@@ -68,6 +68,12 @@ export const pageQuery = graphql`
               current
             }
           }
+          country {
+            name
+            slug {
+              current
+            }
+          }
           excerpt
         }
       }

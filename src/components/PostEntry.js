@@ -13,7 +13,7 @@ const PostEntry = article => {
           <PostMeta {...article} />
       </header>
 
-      <div className="entry-content">{article.excerpt}</div>
+      <div className="excerpt">{article.excerpt}</div>
     </article>
   )
 }

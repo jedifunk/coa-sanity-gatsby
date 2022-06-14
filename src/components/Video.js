@@ -6,7 +6,7 @@ const VideoBlock = ({ node }) => {
   if (!node || !node.asset || !node.asset._id) { return (<pre>Oops, video</pre>) }
 
   return (
-    <figure className="wp-block-video aligncenter">
+    <figure className="video-block">
       <video src={node.asset.url} controls ></video>
       <figcaption>{node.caption}</figcaption>
     </figure>

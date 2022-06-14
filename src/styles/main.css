@@ -1,10 +1,12 @@
 @import './variables.css';
-@import "./original.css";
+@import "./reset.css";
 
 @import './core/layout.css';
 @import './core/media.css';
 @import './core/typography.css';
 @import './core/branding.css';
+@import './core/categories.css';
+@import './core/accessibility.css';
 
 @import "./components/header.css";
 @import "./components/burger.css";
@@ -16,3 +18,5 @@
 @import './components/pagination.css';
 @import './components/quotation.css';
 @import './components/gallery.css';
+@import './components/hero.css';
+@import './components/social-share.css';

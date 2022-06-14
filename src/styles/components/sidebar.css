@@ -7,6 +7,9 @@
 	text-transform: uppercase;
 	border-bottom: 1px dotted black;
 }
+.widget {
+	margin: 0 0 1.5em;
+}
 .widget_categories ul,
 .widget_cloud ul {
 	display: flex;
