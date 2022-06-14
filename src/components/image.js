@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {BiExpandAlt} from 'react-icons/bi'
 import SanityImage from 'gatsby-plugin-sanity-image'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
@@ -40,6 +41,7 @@ const Image = ({node}) => {
   return (
     <>
     <figure className={`img-full`} onClick={updateOnClick}>
+      <BiExpandAlt/>
       <SanityImage {...node} />
       <figcaption>{node.caption}</figcaption>
     </figure>

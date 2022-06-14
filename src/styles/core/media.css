@@ -14,8 +14,25 @@ figcaption {
 	font-style: italic;
 }
 figure.img-full {
+	position: relative;
 	margin-bottom: 1.5rem;
+}
+.img-full > svg {
+	position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  fill: var(--gold);
+  background-color: rgba(0,0,0,.25);
+  border-radius: 5px;
+  padding: 5px;
 }
 .img-full > img {
 	cursor: pointer;
+	transition: filter var(--base-transition);
+}
+.img-full:hover > img {
+	filter: brightness(.75);
 }

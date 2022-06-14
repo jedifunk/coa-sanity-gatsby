@@ -3,18 +3,19 @@ Gatsby frontend for COA. Connects to Sanity on the backend.
 
 Tools in use:
 - [gatsby-source-sanity](https://sanity.io) to connect to my Sanity backend
-- Instagram feed added via [gatsby-source-instagram](https://www.gatsbyjs.org/packages/gatsby-source-instagram/).
+- Instagram feed added via [gatsby-source-instagram-all](https://github.com/MantasMikal/gatsby-source-instagram-all).
 - Lightbox functionality provided by [react-image-lightbox](https://www.npmjs.com/package/react-image-lightbox)
 - [React Player](https://github.com/CookPete/react-player) for Video Embeds
-- [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl) to power Mapbox maps
+- [react-map-gl](https://github.com/visgl/react-map-gl) to power Mapbox maps
 
 
 ## Create config file
 ```javascript
 const Config = {
   source: {
-    protocol: 'https',
-    wpUrl: 'yourdomain.com',
+    projectId: process.env.GATSBY_PROJECT_ID,
+    dataset: process.env.GATSBY_DATASET,
+    apiVersion: process.env.GATSBY_API_VERSION,
   },
   search: {
       appID: APP_ID,
@@ -26,11 +27,9 @@ const Config = {
   }
 }
 
-Config.source.url = Config.source.protocol + '://' + Config.source.wpUrl;
-
 module.exports = Config
 ```
 
 ### TODO
-- [ ] decide between `@sanity/image-url` and `gatsby-image`
-- [ ] find new IG embed solution
+- [ ] Better Google Font loading solution
+- [ ] Add search?
