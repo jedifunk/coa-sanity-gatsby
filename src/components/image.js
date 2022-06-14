@@ -40,10 +40,12 @@ const Image = ({node}) => {
   }
   return (
     <>
-    <figure className={`img-full`} onClick={updateOnClick}>
-      <BiExpandAlt/>
-      <SanityImage {...node} />
-      <figcaption>{node.caption}</figcaption>
+    <figure className={`img-full`}>
+      <button onClick={updateOnClick}>
+        <BiExpandAlt/>
+        <SanityImage {...node} />
+        <figcaption>{node.caption}</figcaption>
+      </button>
     </figure>
     {isOpen && (
         <Lightbox

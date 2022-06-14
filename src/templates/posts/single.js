@@ -8,8 +8,6 @@ import Sidebar from "../../components/Sidebar"
 import PostMeta from '../../components/PostMeta'
 import PortableText from '../../components/PortableText'
 //import SocialShare from '../../components/SocialShare'
-const Config = require('../../../config')
-// import { TransitionLink } from "gatsby-plugin-transition-link"
 
 const SinglePost = ({ data, pageContext }) => {
   const {

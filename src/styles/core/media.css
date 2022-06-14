@@ -7,7 +7,7 @@ video {
 	width: 100%;
 }
 figure {
-	width: 100% !important;
+	width: 100%;
 }
 figcaption {
 	font-size: .9rem;
@@ -17,7 +17,12 @@ figure.img-full {
 	position: relative;
 	margin-bottom: 1.5rem;
 }
-.img-full > svg {
+.img-full button {
+	border: none;
+	background: none;
+	padding: 0;
+}
+.img-full svg {
 	position: absolute;
   top: 5px;
   right: 5px;
@@ -29,10 +34,10 @@ figure.img-full {
   border-radius: 5px;
   padding: 5px;
 }
-.img-full > img {
+.img-full img {
 	cursor: pointer;
 	transition: filter var(--base-transition);
 }
-.img-full:hover > img {
+.img-full:hover img {
 	filter: brightness(.75);
 }

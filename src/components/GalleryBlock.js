@@ -43,7 +43,7 @@ const GalleryBlock = ({ node }) => {
 
   return (
     <>
-      <ul className={`blocks-gallery-grid columns-${cols} is-cropped`}>
+      <div className={`blocks-gallery-grid columns-${cols}`}>
         {node.images.map((img, index) => {
           // setup onclick function to handle state change
           function updateOnClick() {
@@ -52,20 +52,16 @@ const GalleryBlock = ({ node }) => {
           }
           
           return (
-            <li
-              key={index}
-              onClick={updateOnClick}
-              className="blocks-gallery-item"
-            >
-              <figure>
+            <figure key={index} className="blocks-gallery-item">
+              <button onClick={updateOnClick}>
                 <BiExpandAlt/>
                 <SanityImage {...img} width={500} />
                 {img.caption && <figcaption>{img.caption}</figcaption>}
-              </figure>
-            </li>
+              </button>
+            </figure>
           )
         })}
-      </ul>
+      </div>
 
       {isOpen && (
         <Lightbox
