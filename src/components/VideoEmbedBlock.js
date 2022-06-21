@@ -5,10 +5,11 @@ const VideoEmbedPlayer = ({ node }) => {
 
   return (
     <figure className='video-embed'>
-      <Player 
+      <Player
+        className='yt-wrap'
+        width='100%'
+        height='100%'
         url={node.url}
-        width='725px'
-        height='408px'
         controls={true}
       />
       {node.caption && <figcaption>{node.caption}</figcaption>}
