@@ -7,7 +7,7 @@ const VideoBlock = ({ node }) => {
   return (
     <figure className="video-block">
       <video src={node.asset.url} controls></video>
-      <figcaption>{node.caption}</figcaption>
+      {node.caption && <figcaption>{node.caption}</figcaption>}
     </figure>
   )
 

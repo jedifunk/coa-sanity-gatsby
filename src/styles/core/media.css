@@ -13,7 +13,9 @@ figcaption {
 	font-size: .9rem;
 	font-style: italic;
 }
-figure.img-full {
+figure.img-full,
+figure.video-embed,
+figure.video-block {
 	position: relative;
 	margin-bottom: 1.5rem;
 }

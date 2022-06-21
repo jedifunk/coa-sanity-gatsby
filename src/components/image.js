@@ -19,7 +19,7 @@ const Image = ({node}) => {
       <button onClick={updateOnClick}>
         <BiExpandAlt/>
         <SanityImage {...node} />
-        <figcaption>{node.caption}</figcaption>
+        {node.caption && <figcaption>{node.caption}</figcaption>}
       </button>
     </figure>
     {isOpen && (
