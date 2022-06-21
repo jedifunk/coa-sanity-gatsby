@@ -19,3 +19,6 @@
 .widget_cloud ul li {
 	margin: 2px;
 }
+.widget_instagram .grid-thirds {
+	grid-template-columns: repeat(3, 1fr);
+}
