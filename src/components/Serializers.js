@@ -7,6 +7,7 @@ import InstagramBlock from './InstagramBlock'
 import Mapbox from './Mapbox'
 import Quotation from './Quotation'
 import Break from './Breaks'
+import Embed from './Embed'
 
 const serializers = {
   types: {
@@ -19,6 +20,7 @@ const serializers = {
     mapbox: Mapbox,
     quotation: Quotation,
     break: Break,
+    embed: Embed,
   }
 }
 

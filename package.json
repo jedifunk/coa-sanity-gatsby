@@ -22,6 +22,7 @@
     "gatsby-source-instagram-all": "^5.2.1",
     "gatsby-source-sanity": "^7.3.2",
     "gatsby-transformer-sharp": "^4.8.0",
+    "get-video-id": "^3.6.4",
     "mapbox-gl": "^2.7.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

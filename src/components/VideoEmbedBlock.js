@@ -2,9 +2,17 @@ import React from 'react'
 import Player from 'react-player'
 
 const VideoEmbedPlayer = ({ node }) => {
+  const link = node.url
+  console.log(link)
+  if (link.includes('youtube') ) {
+    console.log('YT')
+  }
+  const Spot = {
+    borderRadius: `12px`
+  }
 
   return (
-    <figure className='video-embed'>
+    <figure className='embed yt-embed'>
       <Player
         className='yt-wrap'
         width='100%'
