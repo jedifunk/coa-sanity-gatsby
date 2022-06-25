@@ -15,6 +15,7 @@ p {
 blockquote {
   font-size: 1.25rem;
   font-weight: 450;
+  white-space: pre-wrap;
 }
 hr {
   width: 75%;
