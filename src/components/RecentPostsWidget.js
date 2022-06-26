@@ -7,7 +7,7 @@ const RecentPostsWidget = () => {
   const posts = data.allSanityArticle.edges
 
   return (
-    <section className="widget">
+    <section className="widget recent-articles">
       <h3 className="widget-title">Recent Articles</h3>
       <ul>
         {posts && posts.map(post => (

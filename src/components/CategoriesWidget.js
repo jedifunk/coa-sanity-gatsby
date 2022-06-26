@@ -12,7 +12,7 @@ const CategoriesWidget = () => {
       <ul className="cat-links">
         {categories && categories.map(category => (
           <li key={category.node.slug.current}>
-            <Link to={`/${category.node.slug.current}`}>{category.node.title}</Link>
+            <Link className="pill" to={`/${category.node.slug.current}`}>{category.node.title}</Link>
           </li>
         ))}
       </ul>

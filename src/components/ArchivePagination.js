@@ -29,7 +29,7 @@ const ArchivePagination = ({ details }) => {
         <ul className={`nav-paged`}>
         {Array.from({ length: numPages }, (_, i) => (
           <li key={`pagination-number${i + 1}`} >
-            <Link to={`/${i === 0 ? '' : i + 1}`} >
+            <Link className="" to={`/${i === 0 ? '' : i + 1}`} >
               {i + 1}
             </Link>
           </li>

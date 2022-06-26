@@ -12,7 +12,7 @@ const CountryWidget = () => {
       <ul className="cat-links">
         {countries && countries.map(country => (
           <li key={country.slug.current}>
-            <Link to={`/${country.slug.current}`}>{country.name}</Link>
+            <Link className="pill" to={`/${country.slug.current}`}>{country.name}</Link>
           </li>
         ))}
       </ul>

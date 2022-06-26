@@ -7,6 +7,7 @@
   --l: 30%;
   --a: 1;
   --alt-l: 35%;
+  --alt-a: .5;
   --main-color: hsla(var(--h) var(--s) var(--l) / var(--a));
 }
 /* These overwrite current styles, should be adjusted to just be the style */
@@ -18,7 +19,18 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
 }
 a {
-  color: var(--off-black)
+  color: var(--off-black);
+  text-decoration: none;
+  background-image: linear-gradient(to top, var(--main-color), var(--main-color));
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  transition: all var(--base-transition);
+}
+a:hover {
+  background-image: linear-gradient(to top, hsla(var(--h) var(--s) var(--l) / .5), hsla(var(--h) var(--s) var(--l) / .5));
+  background-size: 100% 50%;
+  transition: all var(--base-transition);
 }
 p {
   line-height: 1.7;
@@ -26,6 +38,7 @@ p {
 .site-title a, .site-title a:visited, .site-title a:hover, .site-title a:active {
   color: var(--off-black);
   font-weight: 900;
+  background: none;
 }
 .main-navigation li a {
   font-family: var(--headline-font);
@@ -48,10 +61,44 @@ p {
 .cat-links li {
   display: inline-flex;
 }
-.cat-links a, .cat-links a:visited, .featured-item .cat-links a, .featured-item .cat-links a:visited {
+.nav-paged {
+  gap: .25rem;
+}
+.nav-paged li + li {
+  margin: 0;
+}
+.nav-paged li a {
+  padding: unset;
+}
+@media (min-width: 1025px) {
+  .main-navigation ul a {
+    font-size: 1rem;
+  }
+}
+
+/* New adds */
+.site-branding {
+  align-self: center;
+}
+.recent-articles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.recent-articles li + li {
+  margin-top: .5rem;
+}
+.recent-articles a {
+  font-size: .97rem;
+}
+.entry-title a, .entry-title a:visited {
+  background: none;
+}
+.pill {
   display: inline-block;
   color: white;
   border: none;
+  background-image: none;
   background-color: var(--main-color);
   padding: 3px 6px;
   border-radius: 3px;
@@ -60,15 +107,7 @@ p {
   text-transform: none;
   transition: var(--base-transition);
 }
-.widget_cloud a:hover {
+.pill:hover {
+  background-image: none;
   background-color: hsl(var(--h) var(--s) var(--alt-l) / var(--a));
-}
-@media (min-width: 1025px) {
-  .main-navigation ul a {
-    font-size: 1rem;
-  }
-}
-/* New adds */
-.site-branding {
-  align-self: center;
 }
