@@ -20,3 +20,6 @@
 @import './components/gallery.css';
 @import './components/hero.css';
 @import './components/social-share.css';
+
+/* Testing new styles */
+@import './v2.css';
