@@ -12,19 +12,43 @@
 /* These overwrite current styles, should be adjusted to just be the style */
 body {
   font-weight: 400;
-  line-height: 1.7;
-}
-.site-title a:visited, .site-title a:hover, .site-title a:active {
-  color: var(--off-black);
-  font-weight: 900;
+  font-size: 18px;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
 }
+a {
+  color: var(--off-black)
+}
+p {
+  line-height: 1.7;
+}
+.site-title a, .site-title a:visited, .site-title a:hover, .site-title a:active {
+  color: var(--off-black);
+  font-weight: 900;
+}
+.main-navigation li a {
+  font-family: var(--headline-font);
+  font-weight: 500;
+  text-transform: none;
+}
 .entry-title {
   font-weight: 700;
+  border: none;
+  padding: 0;
 }
-.cat-links a, .cat-links a:visited, .tax-links a, .tax-links a:visited, .featured-item .cat-links a, .featured-item .cat-links a:visited, .featured-item .tax-links a, .featured-item .tax-links a:visited, .widget_cloud a, .widget_cloud a:visited {
+.cat-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+.cat-links li {
+  display: inline-flex;
+}
+.cat-links a, .cat-links a:visited, .featured-item .cat-links a, .featured-item .cat-links a:visited {
   display: inline-block;
   color: white;
   border: none;
@@ -38,4 +62,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 .widget_cloud a:hover {
   background-color: hsl(var(--h) var(--s) var(--alt-l) / var(--a));
+}
+@media (min-width: 1025px) {
+  .main-navigation ul a {
+    font-size: 1rem;
+  }
+}
+/* New adds */
+.site-branding {
+  align-self: center;
 }
