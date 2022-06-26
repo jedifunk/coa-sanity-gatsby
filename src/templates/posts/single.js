@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import Layout from "../../components/layout"
 import Seo from '../../components/Seo'
 import { Helmet } from 'react-helmet'
+import SanityImage from 'gatsby-plugin-sanity-image'
 import PostPagination from '../../components/PostPagination'
 import Sidebar from "../../components/Sidebar"
 import PostMeta from '../../components/PostMeta'
@@ -15,7 +16,7 @@ const SinglePost = ({ data, pageContext }) => {
     next
   } = pageContext
   const article = data.sanityArticle
-  
+
   return (
     <Layout>
       <Seo
@@ -36,8 +37,10 @@ const SinglePost = ({ data, pageContext }) => {
               className={`post type-post status-publish format-standard hentry category-react tag-accessibility tag-gatsby entry`}
             >
               <header className="entry-header">
-                <h2 className="entry-title">{data.sanityArticle.title}</h2>
+                
                 <PostMeta {...article} />
+                <h2 className="entry-title">{data.sanityArticle.title}</h2>
+                {article.featuredImage && <SanityImage {...article.featuredImage} width={726} height={408} />}
               </header>
 
               {data.sanityArticle._rawContent && <PortableText blocks={data.sanityArticle._rawContent}/>}
