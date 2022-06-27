@@ -7,7 +7,7 @@ const InstagramWidget = () => (
     query={IG_QUERY}
     render={data => {
       return (
-        <section className="widget">
+        <section className="widget widget-ig">
           <h3 className="widget-title">Visually Speaking</h3>
           {/* <p>If you enjoy these images, please follow me <a href={`https://instagram.com/${data.allInstagramContent.distinct}`} target="_blank" rel="noopener noreferrer">@jedifunk</a>.</p> */}
           <div className="grid-wrapper grid-thirds">

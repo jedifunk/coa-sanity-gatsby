@@ -7,7 +7,7 @@ const CategoriesWidget = () => {
   const categories = data.allSanityCategory.edges
 
   return (
-    <section className="widget">
+    <section className="widget widget-categories">
       <h3 className="widget-title">Categories</h3>
       <ul className="cat-links">
         {categories && categories.map(category => (

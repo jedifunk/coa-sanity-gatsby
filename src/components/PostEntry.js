@@ -5,7 +5,7 @@ import PostMeta from './PostMeta'
 const PostEntry = article => {
 
   return (
-    <article className="post" >
+    <article className="post-entry" >
       <header className="entry-header">
           <h2 className="entry-title">
               <Link to={`/${article.slug.current}`}>{article.title}</Link>

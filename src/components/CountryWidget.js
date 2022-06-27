@@ -7,7 +7,7 @@ const CountryWidget = () => {
   const countries = data.allSanityCountry.edges.map(country => country.node).filter(x => x.menu)
 
   return (
-    <section className="widget">
+    <section className="widget widget-countries">
       <h3 className="widget-title">Countries</h3>
       <ul className="cat-links">
         {countries && countries.map(country => (
