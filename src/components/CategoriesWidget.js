@@ -24,7 +24,7 @@ export default CategoriesWidget
 
 const query = graphql`
   query GetCategories {
-    allSanityCategory {
+    allSanityCategory(sort: {fields: title}) {
       edges {
         node {
           title

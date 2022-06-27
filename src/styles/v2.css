@@ -13,7 +13,6 @@
 /* These overwrite current styles, should be adjusted to just be the style */
 body {
   font-weight: 400;
-  font-size: 18px;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
@@ -34,6 +33,7 @@ a:hover {
   transition: all var(--base-transition);
 }
 p {
+  font-size: 18px;
   line-height: 1.7;
 }
 .site-title a, .site-title a:visited, .site-title a:hover, .site-title a:active {
@@ -69,6 +69,17 @@ p {
 .cat-links li {
   display: inline-flex;
 }
+.featured-item figure {
+  background-color: unset;
+}
+.featured-item figure img {
+  opacity: unset;
+  transition: filter var(--base-transition);
+}
+.featured-item figure:hover img {
+  opacity: unset;
+  filter: brightness(.75);
+}
 .nav-paged {
   gap: .25rem;
 }
@@ -78,10 +89,19 @@ p {
 .nav-paged li a {
   padding: unset;
 }
+img:not(.hero img) {
+  border-radius: 5px;
+}
 @media (min-width: 1025px) {
   .main-navigation ul a {
     font-size: 1rem;
   }
+}
+/* clean ups - only need what's here */
+.blocks-gallery-item button img {
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--base-transition);
 }
 
 /* New adds */
@@ -127,4 +147,7 @@ p {
 .pill:hover {
   background-image: none;
   background-color: hsl(var(--h) var(--s) var(--alt-l) / var(--a));
+}
+.post ul li {
+  line-height: 1.7;
 }

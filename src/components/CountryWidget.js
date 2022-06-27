@@ -24,7 +24,7 @@ export default CountryWidget
 
 const query = graphql`
   query GetCountries {
-    allSanityCountry {
+    allSanityCountry(sort: {fields: name}) {
       edges {
         node {
           name
