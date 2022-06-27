@@ -2,6 +2,8 @@
   --body-font: 'Merriweather', serif;
   --headline-font: 'Fira Sans', sans-serif;
 
+  --black: var(--off-black);
+
   --h: 199;
   --s: 100%; 
   --l: 30%;
@@ -45,6 +47,10 @@ p {
   font-family: var(--headline-font);
   font-weight: 500;
   text-transform: none;
+}
+.main-navigation li a:visited,
+.main-navigation li a:hover {
+  color: unset;
 }
 .entry-meta {
   display: flex;
@@ -93,9 +99,13 @@ img:not(.hero img) {
   border-radius: 5px;
 }
 @media (min-width: 1025px) {
+  .main-navigation ul > li a {
+    padding: unset;
+  }
   .main-navigation ul a {
     font-size: 1rem;
   }
+
 }
 /* clean ups - only need what's here */
 .blocks-gallery-item button img {
