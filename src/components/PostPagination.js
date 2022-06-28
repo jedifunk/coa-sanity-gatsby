@@ -9,20 +9,12 @@ const PostPagination = ({ previous, next }) => {
     {previous && (
       <div className="nav-previous">
         <FaAngleLeft />
-        <Link to={`/${previous.slug.current}`} rel="prev">
-          <span className="post-title">
-            {previous.title}
-          </span>
-        </Link>
+        <Link to={`/${previous.slug.current}`} rel="prev">{previous.title}</Link>
       </div>
     )}
     {next && (
       <div className="nav-next">
-        <Link to={`/${next.slug.current}`} rel="next">
-          <span className="post-title">
-            {next.title}
-          </span>
-        </Link>
+        <Link to={`/${next.slug.current}`} rel="next">{next.title}</Link>
         <FaAngleRight />
       </div>
     )}

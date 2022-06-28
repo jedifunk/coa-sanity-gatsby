@@ -8,9 +8,9 @@ const Sidebar = props => {
 
   return (
     <aside id="secondary" className="sidebar">
-      {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
-      <LocationsWidget />
       <CategoriesWidget />
+      <LocationsWidget />
+      {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
       <InstagramWidget />
     </aside>
   )

@@ -95,6 +95,9 @@ blockquote {
   opacity: unset;
   filter: brightness(.75);
 }
+.featured-item figcaption {
+  font-size: unset;
+}
 .post-navigation {
   display: flex;
   flex-direction: column;
@@ -121,6 +124,10 @@ svg.enlarge {
   fill: rgba(255 255 255 / .75);
   background-color: hsla(var(--h) var(--s) var(--l) / .5);
 }
+.blocks-gallery-item figcaption {
+  font-family: var(--headline-font);
+  font-weight: 300;
+}
 @media (min-width: 769px) {
   .post-navigation {
     flex-direction: row;
@@ -140,6 +147,10 @@ svg.enlarge {
   height: 100%;
   object-fit: cover;
   transition: filter var(--base-transition);
+}
+.sidebar h3 {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0 0 0 / .5);
 }
 
 /* New adds */
