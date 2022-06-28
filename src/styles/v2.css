@@ -96,8 +96,15 @@ blockquote {
   opacity: unset;
   filter: brightness(.75);
 }
+.post-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
 .nav-paged {
-  gap: .25rem;
+  gap: 1rem;
 }
 .nav-paged li + li {
   margin: 0;
@@ -110,6 +117,11 @@ img:not(.hero img) {
 }
 .widget-ig .grid-thirds {
   grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 769px) {
+  .post-navigation {
+    flex-direction: row;
+  }
 }
 @media (min-width: 1025px) {
   .main-navigation ul > li a {

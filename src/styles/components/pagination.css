@@ -19,6 +19,10 @@ justify-content: space-between;
 .nav-paged li a {
   padding: 0 .5rem;
 }
+.nav-paged li a.current {
+  font-size: 1.1em;
+  font-weight: 500;
+}
 .nav-previous, .nav-next {
   display: flex;
   flex-wrap: nowrap;
