@@ -19,10 +19,11 @@ const ArchivePagination = ({ details }) => {
       <div className="nav-links">
 
         <div className="nav-previous"> 
-        {!isFirst && ( 
-          <Link to={`/${prevPage}`} rel="prev">
-            <FaAngleLeft /> Newer Posts
-          </Link>
+        {!isFirst && (
+          <>
+          <FaAngleLeft />
+          <Link to={`/${prevPage}`} rel="prev">Newer Posts</Link>
+          </>
         )}
         </div>
 
@@ -38,9 +39,10 @@ const ArchivePagination = ({ details }) => {
 
         <div className="nav-next">
         {!isLast && (
-          <Link to={`/${nextPage}`} rel="next">
-            Older Posts <FaAngleRight />
-          </Link>
+          <>
+          <Link to={`/${nextPage}`} rel="next">Older Posts</Link>
+          <FaAngleRight />
+          </>
         )}
         </div>
 

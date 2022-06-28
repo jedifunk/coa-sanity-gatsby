@@ -15,6 +15,8 @@
 /* These overwrite current styles, should be adjusted to just be the style */
 body {
   font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
@@ -34,10 +36,10 @@ a:hover {
   background-size: 100% 50%;
   transition: all var(--base-transition);
 }
-p {
-  font-size: 18px;
+/* p {
+  font-size: 1.125rem;
   line-height: 1.7;
-}
+} */
 figure.quotation {
   border-color: var(--main-color);
 }
