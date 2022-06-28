@@ -117,6 +117,10 @@ img:not(.hero img) {
 .widget-ig .grid-thirds {
   grid-template-columns: repeat(3, 1fr);
 }
+svg.enlarge {
+  fill: rgba(255 255 255 / .75);
+  background-color: hsla(var(--h) var(--s) var(--l) / .5);
+}
 @media (min-width: 769px) {
   .post-navigation {
     flex-direction: row;

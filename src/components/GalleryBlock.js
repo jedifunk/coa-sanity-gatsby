@@ -27,7 +27,7 @@ const GalleryBlock = ({ node }) => {
           return (
             <figure key={index} className="blocks-gallery-item">
               <button onClick={updateOnClick}>
-                <BiExpandAlt/>
+                <BiExpandAlt className='enlarge'/>
                 <SanityImage {...img} width={500} />
                 {img.caption && <figcaption>{img.caption}</figcaption>}
               </button>
