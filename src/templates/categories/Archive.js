@@ -46,7 +46,7 @@ export default CategoryArchive
 export const pageQuery = graphql`
   query($category: String) {
     posts: allSanityArticle(
-      sort: { fields: [_createdAt], order: DESC }
+      sort: { fields: publishDate, order: DESC }
       filter: {categories: {elemMatch: {slug: {current: {eq: $category}}}}}
     ) {
       totalCount

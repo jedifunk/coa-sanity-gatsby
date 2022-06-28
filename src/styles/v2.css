@@ -36,10 +36,6 @@ a:hover {
   background-size: 100% 50%;
   transition: all var(--base-transition);
 }
-/* p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-} */
 figure.quotation {
   border-color: var(--main-color);
 }
@@ -47,6 +43,9 @@ blockquote {
   font-family: var(--headline-font);
   font-size: 1.2rem;
   font-weight: 400;
+}
+.grid-halves, .grid-thirds, .grid-fourths {
+  grid-auto-rows: min-content;
 }
 .site-title a, .site-title a:visited, .site-title a:hover, .site-title a:active {
   color: var(--off-black);
