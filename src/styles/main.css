@@ -4,7 +4,7 @@
 @import './core/layout.css';
 @import './core/media.css';
 @import './core/typography.css';
-@import './core/branding.css';
+@import './components/post.css';
 @import './core/categories.css';
 @import './core/accessibility.css';
 
@@ -20,6 +20,3 @@
 @import './components/gallery.css';
 @import './components/hero.css';
 @import './components/social-share.css';
-
-/* Testing new styles */
-@import './v2.css';
