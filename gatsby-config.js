@@ -46,20 +46,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-source-instagram-all`,
       options: {
-        fonts: [
-          {
-            family: 'Playfair Display',
-            variable: true,
-            weights: ['400..700']
-          },
-          {
-            family: 'Raleway',
-            variable: true,
-            weights: ['300..600']
-          }
-        ]
+        access_token: process.env.GATSBY_IG_TOKEN,
+        limit: 9,
       }
     },
     {
@@ -69,28 +59,6 @@ module.exports = {
         includeInDevelopment: false,
         enableWebVitalsTracking: true,
       },
-    },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: 'Choosing Our Adventure',
-    //     start_url: '/',
-    //     background_color: `#ffcd00`,
-    //     theme_color: `#a2466c`,
-    //     display: `standalone`,
-    //     //icon: `${__dirname}/src/images/lejeune-logo.png`
-    //   }
-    // }
-    {
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: process.env.GATSBY_IG_TOKEN,
-        limit: 9,
-      }
     }
-    
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

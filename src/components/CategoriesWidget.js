@@ -7,12 +7,12 @@ const CategoriesWidget = () => {
   const categories = data.allSanityCategory.edges
 
   return (
-    <section id="categories-2" className="widget widget_cloud widget_categories">
+    <section className="widget widget-categories">
       <h3 className="widget-title">Categories</h3>
-      <ul>
+      <ul className="cat-links">
         {categories && categories.map(category => (
           <li key={category.node.slug.current}>
-            <Link to={`/${category.node.slug.current}`}>{category.node.title}</Link>
+            <Link className="pill" to={`/${category.node.slug.current}`}>{category.node.title}</Link>
           </li>
         ))}
       </ul>
@@ -24,7 +24,7 @@ export default CategoriesWidget
 
 const query = graphql`
   query GetCategories {
-    allSanityCategory {
+    allSanityCategory(sort: {fields: title}) {
       edges {
         node {
           title

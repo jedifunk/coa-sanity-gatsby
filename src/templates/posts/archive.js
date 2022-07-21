@@ -37,8 +37,8 @@ const BlogArchive = props => {
       <div id="primary" className="content-area wrapper">
         <main id="main" className="site-main" role="main">
           {pageContext.currentPage === 1 ? 
-            <div className="featured grid-wrapper grid-fourths">
-            {articleNodes && articleNodes.slice(0, 4).map((article, i) => 
+            <div className="featured grid-wrapper grid-halves">
+            {articleNodes && articleNodes.slice(0, 2).map((article, i) => 
               <FeaturedPost key={i} {...article} />           
             )}
           </div>
@@ -48,7 +48,7 @@ const BlogArchive = props => {
             <div>
               <div className="content grid-wrapper grid-halves">
                 {pageContext.currentPage === 1 ? 
-                  articleNodes && articleNodes.slice(4).map((article, i) => <PostEntry {...article} key={i} />)
+                  articleNodes && articleNodes.slice(2).map((article, i) => <PostEntry {...article} key={i} />)
                 :
                   articleNodes && articleNodes.map((article, i) => <PostEntry {...article} key={i} />)
                 }

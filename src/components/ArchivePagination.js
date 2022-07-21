@@ -1,50 +1,68 @@
-import React from "react"
+import React from 'react'
 import { Link } from "gatsby"
+import { usePagination, DOTS } from '../lib/usePagination'
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
-const ArchivePagination = ({ details }) => {
-
+const ArchivePagination = props => {
   const {
+    numPages,
+    siblingCount = 1,
+    currentPage,
+  } = props.details
+
+  const paginationRange = usePagination({
     currentPage,
     numPages,
-  } = details
+    siblingCount,
+  })
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString()
   const nextPage = (currentPage + 1).toString()
 
+  if (currentPage === 0 || paginationRange.length < 2) {
+    return null;
+  }
+
   return (
     <nav className="navigation post-navigation" role="navigation">
-      <div className="nav-links">
-
-        <div className="nav-previous"> 
-        {!isFirst && ( 
-          <Link to={`/${prevPage}`} rel="prev">
-            <FaAngleLeft /> Newer Posts
-          </Link>
-        )}
-        </div>
-
-        <ul className={`nav-paged`}>
-        {Array.from({ length: numPages }, (_, i) => (
-          <li key={`pagination-number${i + 1}`} >
-            <Link to={`/${i === 0 ? '' : i + 1}`} >
-              {i + 1}
-            </Link>
-          </li>
-        ))}
-        </ul>
-
-        <div className="nav-next">
-        {!isLast && (
-          <Link to={`/${nextPage}`} rel="next">
-            Older Posts <FaAngleRight />
-          </Link>
-        )}
-        </div>
-
+        
+      <div className="nav-previous"> 
+      {!isFirst && (
+        <>
+        <FaAngleLeft />
+        <Link to={`/${prevPage}`} rel="prev">Newer Posts</Link>
+        </>
+      )}
       </div>
+
+      <ul className={`nav-paged`} >
+
+        {paginationRange.map((pageNumber, i) => {
+          if (pageNumber === DOTS) {
+            return <li key={i} className="dots">&#8230;</li>
+          }
+
+          return (
+            <li key={i}>
+              <Link className={`${pageNumber === currentPage ? 'current' : ''}`} to={`/${i === 0 ? '' : pageNumber}`} >
+                {pageNumber}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+
+      <div className="nav-next">
+      {!isLast && (
+        <>
+        <Link to={`/${nextPage}`} rel="next">Older Posts</Link>
+        <FaAngleRight />
+        </>
+      )}
+      </div>
+
     </nav>
   )
 }

@@ -17,7 +17,7 @@ const Image = ({node}) => {
     <>
     <figure className={`img-full`}>
       <button onClick={updateOnClick}>
-        <BiExpandAlt/>
+        <BiExpandAlt className='enlarge'/>
         <SanityImage {...node} />
         {node.caption && <figcaption>{node.caption}</figcaption>}
       </button>

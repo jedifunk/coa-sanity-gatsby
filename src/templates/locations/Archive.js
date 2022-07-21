@@ -46,7 +46,7 @@ export default LocationArchive
 export const pageQuery = graphql`
   query($country: String) {
     posts: allSanityArticle(
-      sort: { fields: [publishDate], order: DESC }
+      sort: { fields: publishDate, order: DESC }
       filter: {country: {slug: {current: {eq: $country}}}}
     ) {
       edges {

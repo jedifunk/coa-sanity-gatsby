@@ -4,7 +4,7 @@
 @import './core/layout.css';
 @import './core/media.css';
 @import './core/typography.css';
-@import './core/branding.css';
+@import './components/post.css';
 @import './core/categories.css';
 @import './core/accessibility.css';
 

@@ -11,19 +11,15 @@
 }
 .main-navigation li a {
 	text-decoration: none;
-	text-transform: uppercase;
+  font-family: var(--headline-font);
 	font-size: 2rem;
-	font-weight: 600;
-	color: black;
-
-	transition: all .3s ease;
+	font-weight: 500;
+	color: var(--off-black);
+	transition: var(--base-transition);
 }
-.main-navigation li a:visited {
-	color: black;
-}
+.main-navigation li a:visited,
 .main-navigation li a:hover {
-	color: rgba(212,175,55,1);
-	transition: all .3s ease;
+	color: unset;
 }
 .main-navigation .menu-item-has-children .sub-menu {
 	display: none;
@@ -44,11 +40,11 @@
     flex-direction: row;
   }
   .main-navigation li a {
-    font-size: .75rem;
+    font-size: 1rem;
   }
-  .main-navigation ul > li a {
+  /* .main-navigation ul > li a {
     padding: 12px 0;
-  }
+  } */
   .main-navigation .menu-item-has-children:hover > .sub-menu {
     position: absolute;
     display: flex;

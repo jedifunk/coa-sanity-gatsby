@@ -7,10 +7,10 @@ import InstagramWidget from "./InstagramWidget"
 const Sidebar = props => {
 
   return (
-    <aside id="secondary" className="widget-area sidebar">
-      {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
-      <LocationsWidget />
+    <aside id="secondary" className="sidebar">
       <CategoriesWidget />
+      <LocationsWidget />
+      {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
       <InstagramWidget />
     </aside>
   )
