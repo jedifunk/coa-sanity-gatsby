@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-//import SanityImage from 'gatsby-plugin-sanity-image'
+import SanityImage from 'gatsby-plugin-sanity-image'
 
 const Hero = () => {
   const data = useStaticQuery(query)
@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      {/* <SanityImage {...img} /> */}
+      <SanityImage {...img} />
     </div>
   )
 }
