@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {BiExpandAlt} from 'react-icons/bi'
-import SanityImage from 'gatsby-plugin-sanity-image'
+//import SanityImage from 'gatsby-plugin-sanity-image'
 import Lightbox from 'react-image-lightbox'
 import { sSpeed } from '../lib/Helpers'
 import 'react-image-lightbox/style.css'
@@ -18,7 +18,7 @@ const Image = ({node}) => {
     <figure className={`img-full`}>
       <button onClick={updateOnClick}>
         <BiExpandAlt className='enlarge'/>
-        <SanityImage {...node} />
+        {/* <SanityImage {...node} /> */}
         {node.caption && <figcaption>{node.caption}</figcaption>}
       </button>
     </figure>

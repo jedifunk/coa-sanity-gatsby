@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import SanityImage from 'gatsby-plugin-sanity-image'
+//import SanityImage from 'gatsby-plugin-sanity-image'
 import Lightbox from 'react-image-lightbox'
 import {BiExpandAlt} from 'react-icons/bi'
 import { sSpeed } from "../lib/Helpers"
@@ -28,7 +28,7 @@ const GalleryBlock = ({ node }) => {
             <figure key={index} className="blocks-gallery-item">
               <button onClick={updateOnClick}>
                 <BiExpandAlt className='enlarge'/>
-                <SanityImage {...img} width={500} />
+                {/* <SanityImage {...img} width={500} /> */}
                 {img.caption && <figcaption>{img.caption}</figcaption>}
               </button>
             </figure>
