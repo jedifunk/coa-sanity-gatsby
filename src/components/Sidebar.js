@@ -2,7 +2,7 @@ import React from "react"
 import RecentPostsWidget from "./RecentPostsWidget"
 import LocationsWidget from './CountryWidget'
 import CategoriesWidget from "./CategoriesWidget"
-import InstagramWidget from "./InstagramWidget"
+//import InstagramWidget from "./InstagramWidget"
 
 const Sidebar = props => {
 
@@ -11,7 +11,7 @@ const Sidebar = props => {
       <CategoriesWidget />
       <LocationsWidget />
       {props.page === 'archive' && props.current === 1 ? null : <RecentPostsWidget />}
-      <InstagramWidget />
+      {/* <InstagramWidget /> */}
     </aside>
   )
 }
