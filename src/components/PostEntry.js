@@ -6,15 +6,28 @@ import PostMeta from './PostMeta'
 const PostEntry = article => {
   return (
     <article className="post-entry" >
-      <header className="entry-header">
-      {/* <Link to={`/${article.slug.current}`}>{article.featuredImage && <SanityImage {...article.featuredImage} width={347} height={196} />}</Link> */}
+      <figure>
+        <Link to={`/${article.slug.current}`}>
+          {article.featuredImage && <SanityImage {...article.featuredImage} width={347} height={196} />}
+        </Link>
+        <figcaption>
+          <h2 className="entry-title">
+            <Link to={`/${article.slug.current}`}>{article.title}</Link>
+          </h2>
+          <PostMeta {...article} />
+
+          <div className="excerpt">{article.excerpt}</div>
+        </figcaption>
+      </figure>
+      {/* <header className="entry-header">
+      <Link to={`/${article.slug.current}`}>{article.featuredImage && <SanityImage {...article.featuredImage} width={347} height={196} />}</Link>
         <h2 className="entry-title">
           <Link to={`/${article.slug.current}`}>{article.title}</Link>
         </h2>
         <PostMeta {...article} />
       </header>
 
-      <div className="excerpt">{article.excerpt}</div>
+      <div className="excerpt">{article.excerpt}</div> */}
     </article>
   )
 }
