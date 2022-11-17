@@ -43,43 +43,41 @@ const CategoryArchive = props => {
 
 export default CategoryArchive
 
-export const pageQuery = graphql`
-  query($category: String) {
-    posts: allSanityArticle(
-      sort: { fields: publishDate, order: DESC }
-      filter: {categories: {elemMatch: {slug: {current: {eq: $category}}}}}
-    ) {
-      totalCount
-      edges {
-        node {
-          id
+export const pageQuery = graphql`query ($category: String) {
+  posts: allSanityArticle(
+    sort: {publishDate: DESC}
+    filter: {categories: {elemMatch: {slug: {current: {eq: $category}}}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        _createdAt
+        publishDate
+        slug {
+          current
+        }
+        author {
+          name
+        }
+        categories {
           title
-          _createdAt
-          publishDate
           slug {
             current
           }
-          author {
-            name
-          }
-          categories {
-            title
-            slug {
-              current
-            }
-          }
-          country {
-            name
-            slug {
-              current
-            }
-          }
-          excerpt
         }
+        country {
+          name
+          slug {
+            current
+          }
+        }
+        excerpt
       }
     }
-    catTitle: sanityCategory(slug: {current: {eq: $category}}) {
-      title
-    }
   }
-`
+  catTitle: sanityCategory(slug: {current: {eq: $category}}) {
+    title
+  }
+}`

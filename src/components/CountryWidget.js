@@ -22,18 +22,16 @@ const CountryWidget = () => {
 
 export default CountryWidget
 
-const query = graphql`
-  query GetCountries {
-    allSanityCountry(sort: {fields: name}) {
-      edges {
-        node {
-          name
-          menu
-          slug {
-            current
-          }
+const query = graphql`query GetCountries {
+  allSanityCountry(sort: {name: ASC}) {
+    edges {
+      node {
+        name
+        menu
+        slug {
+          current
         }
       }
     }
   }
-`
+}`

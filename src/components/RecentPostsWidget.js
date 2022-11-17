@@ -23,9 +23,8 @@ const RecentPostsWidget = () => {
 
 export default RecentPostsWidget
 
-const query = graphql`
-query GetRecentPosts {
-  allSanityArticle(limit: 5, sort: {order: DESC, fields: publishDate}) {
+const query = graphql`query GetRecentPosts {
+  allSanityArticle(limit: 5, sort: {publishDate: DESC}) {
     edges {
       node {
         title

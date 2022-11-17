@@ -7,40 +7,38 @@ const locationTemplate = path.resolve(`./src/templates/locations/Archive.js`)
 module.exports = async ({graphql, actions, reporter}) => {
   const {createPage} = actions
 
-  const result = await graphql(`
-    {
-      posts: allSanityArticle(
-        filter: {slug: {current: {ne: null} } }
-        sort: {fields: publishDate, order: DESC}
-      ) {
-        edges {
-          node {
-            id
-            title
-            slug {
-              current
-            }
-          }
-        }
-      }
-      catGroup: allSanityArticle(
-        filter: {slug: {current: {ne: null} } }
-        sort: {fields: publishDate, order: DESC}
-      ) {
-        group(field: categories___slug___current) {
-          fieldValue
-        }
-      }
-      countryGroup: allSanityArticle(
-        filter: {slug: {current: {ne: null} } }
-        sort: {fields: publishDate, order: DESC}
-      ) {
-        group(field: country___slug___current) {
-          fieldValue
+  const result = await graphql(`{
+  posts: allSanityArticle(
+    filter: {slug: {current: {ne: null}}}
+    sort: {publishDate: DESC}
+  ) {
+    edges {
+      node {
+        id
+        title
+        slug {
+          current
         }
       }
     }
-  `)
+  }
+  catGroup: allSanityArticle(
+    filter: {slug: {current: {ne: null}}}
+    sort: {publishDate: DESC}
+  ) {
+    group(field: {categories: {slug: {current: SELECT}}}) {
+      fieldValue
+    }
+  }
+  countryGroup: allSanityArticle(
+    filter: {slug: {current: {ne: null}}}
+    sort: {publishDate: DESC}
+  ) {
+    group(field: {country: {slug: {current: SELECT}}}) {
+      fieldValue
+    }
+  }
+}`)
 
   if (result.errors) {
     throw result.errors

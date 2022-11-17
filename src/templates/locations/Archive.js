@@ -43,42 +43,40 @@ const LocationArchive = props => {
 
 export default LocationArchive
 
-export const pageQuery = graphql`
-  query($country: String) {
-    posts: allSanityArticle(
-      sort: { fields: publishDate, order: DESC }
-      filter: {country: {slug: {current: {eq: $country}}}}
-    ) {
-      edges {
-        node {
-          id
+export const pageQuery = graphql`query ($country: String) {
+  posts: allSanityArticle(
+    sort: {publishDate: DESC}
+    filter: {country: {slug: {current: {eq: $country}}}}
+  ) {
+    edges {
+      node {
+        id
+        title
+        _createdAt
+        publishDate
+        slug {
+          current
+        }
+        author {
+          name
+        }
+        categories {
           title
-          _createdAt
-          publishDate
           slug {
             current
           }
-          author {
-            name
-          }
-          categories {
-            title
-            slug {
-              current
-            }
-          }
-          country {
-            name
-            slug {
-              current
-            }
-          }
-          excerpt
         }
+        country {
+          name
+          slug {
+            current
+          }
+        }
+        excerpt
       }
     }
-    countryTitle: sanityCountry(slug: {current: {eq: $country}}) {
-      name
-    }
   }
-`
+  countryTitle: sanityCountry(slug: {current: {eq: $country}}) {
+    name
+  }
+}`

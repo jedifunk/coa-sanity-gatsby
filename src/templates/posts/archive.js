@@ -65,56 +65,54 @@ const BlogArchive = props => {
 
 export default BlogArchive
 
-export const query = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
-    posts: allSanityArticle(
-      sort: { fields: publishDate, order: DESC }
-      filter: { slug: { current: { ne: null } } }
-      limit: $limit
-      skip: $skip
-      ) {
-      edges {
-        node {
-          id
+export const query = graphql`query blogPageQuery($skip: Int!, $limit: Int!) {
+  posts: allSanityArticle(
+    sort: {publishDate: DESC}
+    filter: {slug: {current: {ne: null}}}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        id
+        title
+        _createdAt
+        publishDate
+        slug {
+          current
+        }
+        author {
+          name
+        }
+        categories {
           title
-          _createdAt
-          publishDate
           slug {
             current
           }
-          author {
-            name
-          }
-          categories {
-            title
-            slug {
-              current
-            }
-          }
-          country {
-            name
-            slug {
-              current
-            }
-          }
-          featuredImage {
-            ...ImageWithPreview
-            alt
-            caption
-            asset {
-              _id
-              url
-            }
-            hotspot {
-              height
-              width
-              x
-              y
-            }
-          }
-          excerpt
         }
+        country {
+          name
+          slug {
+            current
+          }
+        }
+        featuredImage {
+          ...ImageWithPreview
+          alt
+          caption
+          asset {
+            _id
+            url
+          }
+          hotspot {
+            height
+            width
+            x
+            y
+          }
+        }
+        excerpt
       }
     }
   }
-`
+}`

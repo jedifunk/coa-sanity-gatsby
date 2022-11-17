@@ -22,17 +22,15 @@ const CategoriesWidget = () => {
 
 export default CategoriesWidget
 
-const query = graphql`
-  query GetCategories {
-    allSanityCategory(sort: {fields: title}) {
-      edges {
-        node {
-          title
-          slug {
-            current
-          }
+const query = graphql`query GetCategories {
+  allSanityCategory(sort: {title: ASC}) {
+    edges {
+      node {
+        title
+        slug {
+          current
         }
       }
     }
   }
-`
+}`
